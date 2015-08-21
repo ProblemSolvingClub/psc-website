@@ -3,9 +3,9 @@ title: Problem Solving Club
 baseurl: ""
 url: "http://psc.cpsc.ucalgary.ca"
 email: psc.uofc@gmail.com
-facebook: "https://www.facebook.com/ProblemSolvingClub"
-twitter: "https://twitter.com/ucalgarypsc"
-github: "https://github.com/ProblemSolvingClub"
+facebook: https://www.facebook.com/ProblemSolvingClub
+twitter: https://twitter.com/ucalgarypsc
+github: https://github.com/ProblemSolvingClub
 
 # Build settings
 markdown: kramdown
