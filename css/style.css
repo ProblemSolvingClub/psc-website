@@ -1,3 +1,32 @@
 body {
   padding-top: 60px; /* to accomodate the fixed-top nav bar */
 }
+
+.jumbotron{
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.jumbotron,
+.jumbotron h4{
+
+}
+
+.panel,
+.panel-primary{
+	margin-top: 30px;
+	margin-right:175px;
+	margin-left: 175px;
+}
+.panel,
+.panel-primary,
+.panel-heading,
+.panel-title{
+	font-size: 75px;
+}
+
+.table,
+.table-striped{
+	margin-top: 20px;
+	font-size: 20px;
+}
