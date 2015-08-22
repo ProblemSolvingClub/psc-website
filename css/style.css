@@ -12,6 +12,11 @@ body {
   margin-bottom: 20px;
 }
 
+.banner img {
+  max-width: 90%;
+}
+
+
 .social-links {
   margin-top: 10px;
   text-align: center;
