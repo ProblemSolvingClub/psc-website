@@ -8,6 +8,10 @@ body {
   margin-top: -15px;
 }
 
+.main-content {
+  margin-bottom: 20px;
+}
+
 .banner {
   margin-bottom: 20px;
 }
@@ -15,7 +19,6 @@ body {
 .banner img {
   max-width: 90%;
 }
-
 
 .social-links {
   margin-top: 10px;
