@@ -17,18 +17,37 @@
     <!-- Navbar items -->
     <div class="navbar-collapse collapse" id="navbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/calendar">Calendar</a></li>
+
+        <li{% if page.url == '/about/index.html' %} class="active"{% endif %}>
+          <a href="/about">About</a>
+        </li>
+
+        <li{% if page.url == '/blog/index.html' %} class="active"{% endif %}>
+          <a href="/blog">Blog</a>
+        </li>
+
+        <li{% if page.url == '/calendar/index.html' %} class="active"{% endif %}>
+          <a href="/calendar">Calendar</a>
+        </li>
+
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contests<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="/contests/practice">Practice</a></li>
-            <li><a href="/contests/acpc">ACPC</a></li>
-            <li><a href="/contests/ccpc">CCPC</a></li>
+            <li{% if page.url == '/contests/practice/index.html' %} class="active"{% endif %}>
+              <a href="/contests/practice">Practice</a>
+            </li>
+            <li{% if page.url == '/contests/acpc/index.html' %} class="active"{% endif %}>
+              <a href="/contests/acpc">ACPC</a>
+            </li>
+            <li{% if page.url == '/contests/ccpc/index.html' %} class="active"{% endif %}>
+              <a href="/contests/ccpc">CCPC</a>
+            </li>
           </ul>
         </li>
-        <li><a href="/resources">Resources</a></li>
+
+        <li{% if page.url == '/resources/index.html' %} class="active"{% endif %}>
+          <a href="/resources">Resources</a>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
