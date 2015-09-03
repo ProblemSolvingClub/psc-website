@@ -16,45 +16,62 @@ title: Problem Solving Club
       <!-- Welcome message -->
       <div class="page-header">
         <h3>
-          Welcome to the University of Calgary's Problem Solving Club.
+          <strong>Welcome!</strong>
         </h3>
       </div>
 
       <!-- Description -->
       <p>
+      <strong>Welcome to the University of Calgary Problem Solving Club website.</strong>
       If you enjoy programming, solving problems, and want to practice coding faster, more efficiently, and with fewer bugs, this is the place to be!
-      The PSC meets every <strong>Wednesday night from 6:00-7:30pm in MS 160</strong> for coaching and practice. Saturday practice contests are also held regularly.
+      We meet every <u>Wednesday night from 6:00-7:30pm in MS 160</u> for coaching and practice. Saturday practice contests are also held regularly.
       </p>
 
-      <hr><!-- Line break -->
+      <!-- Learn more button -->
+      <a class="btn btn-primary btn-sm" href="/about" role="button">
+        Learn more
+      </a>
+
+      <div class="page-header">
+        <h3>
+          <strong>News</strong>
+        </h3>
+      </div>
 
       <!-- World finals team -->
-      <div>
-        <img class="img-responsive" src="/img/world-finals-team.jpg" alt="World finals team">
-        <h4>
-          <a href="http://icpc.baylor.edu">2015 ACM ICPC World Finals in Morocco</a>
-        </h4>
-        <p>
-        Team UCalgary 3 competing in the world finals for collegiate programming contests.
-        <br/>
-        From left to right: Karl Augsten, Wenli Looi, Darko Aleksic (Coach), Aryaz Eghbali.
-        </p>
-      </div>
+      <div class="row">
+        <!-- Caption -->
+        <div class="col-md-5 col-lg-5">
+          <h4>
+            <strong>
+              <a class="text-info" href="http://icpc.baylor.edu">2015 ACM ICPC World Finals in Morocco</a>
+            </strong>
+          </h4>
+          <p>
+          <strong>Team UCalgary 3 competing in the World Finals.</strong>
+          There, they are given 5 hours to solve 10 programming problems in C, C++, or Java. Their solutions must take test data as input and then output the correct answers for every test case. The team that solves the most problems with the least amount of time penalties wins.
+          <br/>
+          For examples of programming contest questions, check out our 
+          <a href="/contests/practice">practice contests.</a>
+          </p>
+        </div><!--./col-details -->
+
+        <!-- Picture -->
+        <div class="col-md-7 col-lg-7">
+          <img class="img-responsive" src="/img/world-finals-team.jpg" alt="World finals team">
+          <p class="text-center">
+          From left to right: Karl Augsten, Wenli Looi, Darko Aleksic, Aryaz Eghbali
+          </p>
+        </div>
+      </div><!--./row -->
 
     </div><!--./main-content -->
 
     <!-- Sidebar information -->
     <div class="col-xs-12 col-sm-4 col-md-3">
 
-      <!-- Join mailing list -->
-      <div class="panel panel-default">
-        <a class="btn btn-link btn-block" href="http://mailman.ucalgary.ca/mailman/listinfo/psc-l" role="button">
-          Join our mailing list
-        </a>
-      </div><!-./panel -->
-
       <!-- Upcoming events -->
-      <div class="panel panel-default">
+      <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Upcoming events</h3>
         </div><!--./panel-heading -->
@@ -64,45 +81,49 @@ title: Problem Solving Club
           <!-- EVENTS GO HERE -->
           <tbody>
             <tr>
-              <th scope="row">08/22</th>
-              <td>Daily Meeting</td>
+              <th scope="row">09/09</th>
+              <td>First Wednesday Meeting</td>
             </tr>
             <tr>
-              <th scope="row">08/23</th>
-              <td>Daily Meeting</td>
+              <th scope="row">09/16</th>
+              <td>Wednesday Meeting</td>
             </tr>
             <tr>
-              <th scope="row">08/24</th>
-              <td>Daily Meeting</td>
+              <th scope="row">09/23</th>
+              <td>Wednesday Meeting</td>
+            </tr>
+            <tr>
+              <th scope="row">09/30</th>
+              <td>Wednesday Meeting</td>
             </tr>
           </tbody>
         </table>
       </div><!--./panel -->
 
       <!-- Social links -->
-      <div class="panel panel-default">
+      <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Connect with us</h3>
         </div><!--./panel-heading -->
 
         <ul class="social-links list-inline">
           <li><!-- Email -->
-            <a href="mailto:{{ site.email }}">
+            <a class="text-info" href="mailto:{{ site.email }}">
               <i class="fa fa-envelope fa-2x"></i>
             </a>
           </li>
           <li><!-- Facebook -->
-            <a href="{{ site.facebook }}">
+            <a class="text-info" href="{{ site.facebook }}">
               <i class="fa fa-facebook fa-2x"></i>
             </a>
           </li>
           <li><!-- Twitter -->
-            <a href="{{ site.twitter }}">
+            <a class="text-info" href="{{ site.twitter }}">
               <i class="fa fa-twitter fa-2x"></i>
             </a>
           </li>
           <li><!-- GitHub -->
-            <a href="{{ site.github }}">
+            <a class="text-info" href="{{ site.github }}">
               <i class="fa fa-github fa-2x"></i>
             </a>
           </li>
@@ -110,17 +131,31 @@ title: Problem Solving Club
       </div><!--./panel -->
 
       <!-- Sponsors -->
-      <div class="panel panel-default">
+      <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Our sponsors</h3>
         </div><!--./panel-heading -->
 
         <ul class="list-group">
-          <li class="list-group-item"><strong>Coverity</strong></li>
-          <li class="list-group-item"><strong>Arcurve</strong></li>
+          <li class="list-group-item">
+            <a href="http://www.arcurve.com">
+              <img class="img-responsive sponsor-logo" src="/img/logo-arcurve.png" alt="Arcurve">
+            </a>
+            <br>
+            <a class="text-center" href="http://www.coverity.com">
+              <img class="sponsor-logo img-responsive" src="/img/logo-coverity.png" alt="Coverity">
+            </a>
+          </li>
         </ul>
 
       </div><!--./panel -->
+
+      <!-- Join mailing list -->
+      <div class="panel">
+        <a class="btn btn-info btn-block" href="http://mailman.ucalgary.ca/mailman/listinfo/psc-l" role="button">
+          Join our mailing list
+        </a>
+      </div><!-- ./panel -->
 
     </div><!--./information -->
 
