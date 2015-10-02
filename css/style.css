@@ -2,6 +2,13 @@ body {
   padding-top: 80px; /* to accomodate the fixed-top nav bar */
 }
 
+.verticalLine {
+    border-left: solid #cccccc;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
 .navbar-brand .navbar-logo {
   width: 62px;
   height: 62px;
