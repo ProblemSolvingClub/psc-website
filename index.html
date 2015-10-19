@@ -20,45 +20,63 @@ title: Problem Solving Club
 
       <!-- Description -->
       <p>
-	<strong>Welcome to the University of Calgary Problem Solving Club website.</strong>
-	If you enjoy programming, solving problems, and want to practice coding faster, more efficiently, and with fewer bugs, this is the place to be!
-	We meet every <u>Wednesday night from 6:00-7:30pm in MS 160</u> for coaching and practice. Saturday practice contests are also held regularly.
+      <strong>Welcome to the University of Calgary Problem Solving Club website.</strong>
+      If you enjoy programming, solving problems, and want to practice coding faster, more efficiently, and with fewer bugs, this is the place to be!
+      We meet every <u>Wednesday night from 6:00-7:30pm in MS 160</u> for coaching and practice. Saturday practice contests are also held regularly.
       </p>
 
       <!-- Learn more button -->
       <a class="btn btn-primary btn-sm" href="/about" role="button">
         Learn more
-      </a> 
-
+      </a>
 
       <div class="page-header">
-	<!--./col problems -->
-	
-        <h2>News</h2> 
+        <h2>News</h2>
       </div>
-
-      <div class="post">
-	{% for post in site.posts limit:10%}
-	<h4>
-	  <strong>
-	    <div class="text-info">{{ post.title }}</div>
-	  </strong>
-	</h4>
-
+      <!-- World finals team -->
+      <div class="row">
         <!-- Caption -->
-	<div class="body">{{ post.content }}</div>
-      </div>
+        <div class="col-md-5 col-lg-5">
+          <h4>
+            <strong>
+              <a class="text-info" href="http://icpc.baylor.edu">2015 ACM ICPC World Finals in Morocco</a>
+            </strong>
+          </h4>
+          <p>
+	    <div class="verticalLine">
+              <strong>Team UCalgary 3 competing in the World Finals.</strong>
+              There, they were given 5 hours to solve 10 programming problems in C, C++, or Java. Their solutions must take test data as input and then output the correct answers for every test case. The team that solved the most problems with the least amount of time penalties wins.
+              For examples of programming contest questions, check out:
+          </p>
+	  </div>
+          <!-- Links to example questions -->
+          <a class="btn btn-primary btn-sm" href="/contests/practice" role="button">Practice</a>
+          <a class="btn btn-danger btn-sm" href="http://icpc.baylor.edu/worldfinals/problems/icpc2015.pdf" role="button">World Finals</a>
+        </div><!--./col-details -->
 
-      {% endfor %}
+        <!-- Picture -->
+        <div class="col-md-7 col-lg-7">
+          <img class="img-responsive" src="/img/world-finals-team.jpg" alt="World finals team">
+          <p class="text-center">
+          From left to right: Karl Augsten, Wenli Looi, Darko Aleksic, Aryaz Eghbali
+          </p>
+        </div>
+      </div><!--./row -->
 
     </div><!--./main-content -->
 
-
-
     <!-- Sidebar information -->
-
     <div class="col-xs-12 col-sm-4 col-md-3">
+
+
       <!--./panel -->
+
+      <!-- Participate in ACPC -->
+      <div class="panel">
+        <a class="btn btn-info btn-block" href="http://psc.cpsc.ucalgary.ca/contests/acpc/2015/" role="button">
+          Participate in ACPC 2015
+        </a>
+      </div><!-- ./panel -->
 
       <!-- Join mailing list -->
       <div class="panel">
@@ -107,7 +125,7 @@ title: Problem Solving Club
 
       </div>
 
-      <!--./panel -->
+<!--./panel -->
 
       <!-- Social links -->
       <div class="panel panel-primary">
