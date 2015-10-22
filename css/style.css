@@ -43,6 +43,10 @@ body {
   max-height: 30px;
 }
 
+.post-title {
+  padding: 0 15px;
+}
+
 /* Responsive iFrame */
 .responsive-iframe-container {
   position: relative;
