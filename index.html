@@ -39,7 +39,9 @@ title: Problem Solving Club
 
       <div class="post">
 	{% for post in site.posts limit:10%}
+	<div class="row">
 	<h4>
+
 	  <strong>
 	    <div class="text-info">{{ post.title }}</div>
 	  </strong>
@@ -47,9 +49,10 @@ title: Problem Solving Club
 
         <!-- Caption -->
 	<div class="body">{{ post.content }}</div>
-      </div>
 
-      {% endfor %}
+	</div> <!--row-->
+	{% endfor %}
+      </div> <!--post-->
 
     </div><!--./main-content -->
 
