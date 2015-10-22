@@ -1,5 +1,5 @@
 ---
-title: "2015 ACM ICPC WORLD FINALS IN MOROCCO"
+title: "ACM-ICPC World Finals 2015 in Morocco"
 layout: post
 ---
 
@@ -12,9 +12,10 @@ For examples of programming contest questions, check out:
 <!-- Links to example questions -->
 <br><br>   
 <a class="btn btn-primary btn-sm" href="/contests/practice" role="button">Practice</a>
-<a class="btn btn-danger btn-sm" href="http://icpc.baylor.edu/worldfinals/problems/icpc2015.pdf" role="button">World Finals</a></div>
-   
-  <div class="col-md-6 col-lg-6">		
+<a class="btn btn-danger btn-sm" href="http://icpc.baylor.edu/worldfinals/problems/icpc2015.pdf" role="button">World Finals</a>
+</div>
+
+<div class="col-md-6 col-lg-6">		
 
 <img class="img-responsive" src="/img/world-finals-team.jpg" alt="World finals team">
 <p class="text-center">
