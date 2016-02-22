@@ -7,5 +7,8 @@ facebook: https://www.facebook.com/ProblemSolvingClub
 twitter: https://twitter.com/ucalgarypsc
 github: https://github.com/ProblemSolvingClub
 
+# Current practice contest link
+current_practice_contest: /practice/2016-02-20/
+
 # Build settings
 markdown: kramdown
