@@ -10,6 +10,7 @@
     function LeaderboardController(leaderboardService) {
         var vm = this;
         vm.getUserDisplayName = getUserDisplayName;
+        vm.getDisplayScore = getDisplayScore;
         vm.getTier = getTier;
         vm.users = [];
         vm.sites = [];
@@ -22,12 +23,17 @@
                 vm.tiers = response.tiers;
             });
 
+
         function getUserDisplayName(user) {
             var displayName = user.firstName;
             if (user.lastName) {
                 displayName += ' ' + user.lastName.charAt(0) + '.';
             }
             return displayName;
+        }
+
+        function getDisplayScore(score) {
+            return score > 0 ? score : 0;
         }
 
         function getTier(totalSolved) {

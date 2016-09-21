@@ -35,8 +35,8 @@ title: Leaderboard
       <tr ng-repeat="user in vm.users">
         <th ng-bind="vm.getUserDisplayName(user)"></th>
         <th ng-bind="vm.getTier(user.totalSolved).name"></th>
-        <th ng-bind="user.totalSolved"></th>
-        <th ng-repeat="site in vm.sites" ng-bind="user.siteSolved[site.id]"></th>
+        <th ng-bind="vm.getDisplayScore(user.totalSolved)"></th>
+        <th ng-repeat="site in vm.sites" ng-bind="vm.getDisplayScore(user.siteSolved[site.id])"></th>
       </tr>
     </tbody>
   </table>
