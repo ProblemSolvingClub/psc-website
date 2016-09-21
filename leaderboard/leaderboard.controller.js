@@ -38,7 +38,7 @@
 
         function getTier(totalSolved) {
             for (var i = vm.tiers.length - 1; i >= 0; i--) {
-                if (totalSolved >= vm.tiers[i].minimumScore) {
+                if (getDisplayScore(totalSolved) >= vm.tiers[i].minimumScore) {
                     return vm.tiers[i];
                 }
             }
