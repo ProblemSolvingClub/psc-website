@@ -33,7 +33,7 @@
         }
 
         function getDisplayScore(score) {
-            return score > 0 ? score : 0;
+            return score > 0 ? score.toFixed(2) : 0;
         }
 
         function getTier(totalSolved) {
