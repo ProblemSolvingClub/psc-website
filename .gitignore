@@ -4,3 +4,6 @@
 # Jekyll compiled site folder
 _site/
 *.*~
+
+# JetBrains IDE settings folder
+.idea/
