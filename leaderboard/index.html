@@ -1,0 +1,54 @@
+---
+layout: default
+title: Leaderboard
+---
+
+<div class="container" ng-app="leaderboard" ng-controller="LeaderboardController as vm">
+  <!-- Page header -->
+  <div class="page-header">
+    <h2>
+      Leaderboard
+    </h2>
+  </div><!--./page-header -->
+
+  <p>
+    Compete against fellow PSC members by solving problems. Every problem you solve on one of the below websites
+    will count as a point.
+  </p>
+
+  <p>
+    The members with the most points will win prizes including a lunch with the CTO of Arcurve.
+    <strong>In order to get added to the leaderboard, you will need to consult a PSC executive.</strong>
+  </p>
+
+  <!-- Cannot use Angular mustache notation for data binding due to conflict with Jekyll. Use ng-bind instead. -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Tier</th>
+        <th>Total</th>
+        <th ng-repeat="site in vm.sites" ng-bind="site.name"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in vm.users">
+        <th ng-bind="vm.getUserDisplayName(user)"></th>
+        <th ng-bind="vm.getTier(user.totalSolved).name"></th>
+        <th ng-bind="user.totalSolved"></th>
+        <th ng-repeat="site in vm.sites" ng-bind="user.siteSolved[site.id]"></th>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+  <!-- Angular -->
+  <script src="./leaderboard.module.js"></script>
+  <script src="./leaderboard.service.js"></script>
+  <script src="./leaderboard.controller.js"></script>
+
+</div><!--./container -->
+
