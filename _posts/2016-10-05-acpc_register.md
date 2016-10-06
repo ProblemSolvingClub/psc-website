@@ -1,5 +1,5 @@
 ---
-title: "CCPC 2016 Registration Now Open"
+title: "ACPC 2016 Registration Now Open"
 layout: post
 ---
 
