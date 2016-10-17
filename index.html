@@ -22,13 +22,20 @@ title: Problem Solving Club
       <p>
 	<strong>Welcome to the University of Calgary Problem Solving Club website.</strong>
 	If you enjoy programming, solving problems, and want to practice coding faster, more efficiently, and with fewer bugs, this is the place to be!
-	We meet every <u>Wednesday night from 6:00-7:30pm in MS 160</u> for coaching and practice. Saturday practice contests are also held regularly.
+  We meet every <u>Wednesday night from 6:00-7:30pm in MS 160</u> for coaching and practice. Saturday practice contests are also held regularly. To join the club, just join our mailing list.
       </p>
 
-      <!-- Learn more button -->
-      <a class="btn btn-primary btn-sm" href="/about" role="button">
-        Learn more
-      </a> 
+      <div>
+        <!-- Join mailing list -->
+        <a class="btn btn-primary btn-sm" href="http://mailman.ucalgary.ca/mailman/listinfo/psc-l" role="button">
+          Join our mailing list
+        </a>
+
+        <!-- Learn more button -->
+        <a class="btn btn-info btn-sm" href="/about" role="button">
+          Learn more
+        </a> 
+      </div>
 
 
       <div class="page-header">
@@ -55,17 +62,38 @@ title: Problem Solving Club
       </div> <!--./post-->
     </div><!--./main-content -->
 
-
-
     <!-- Sidebar information -->
-
     <div class="col-xs-12 col-sm-4 col-md-3">
-       <!-- Join mailing list -->
-      <div class="panel">
-        <a class="btn btn-info btn-block" href="http://mailman.ucalgary.ca/mailman/listinfo/psc-l" role="button">
-          Join our mailing list
-        </a>
-      </div><!-- ./panel -->
+
+      <!-- Social links -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Connect with us</h3>
+        </div><!--./panel-heading -->
+
+        <ul class="social-links list-inline">
+          <li><!-- Email -->
+            <a class="text-info" href="mailto:{{ site.email }}">
+              <i class="fa fa-envelope fa-2x"></i>
+            </a>
+          </li>
+          <li><!-- Facebook -->
+            <a class="text-info" href="{{ site.facebook }}">
+              <i class="fa fa-facebook fa-2x"></i>
+            </a>
+          </li>
+          <li><!-- Twitter -->
+            <a class="text-info" href="{{ site.twitter }}">
+              <i class="fa fa-twitter fa-2x"></i>
+            </a>
+          </li>
+          <li><!-- GitHub -->
+            <a class="text-info" href="{{ site.github }}">
+              <i class="fa fa-github fa-2x"></i>
+            </a>
+          </li>
+        </ul>
+      </div><!--./panel -->
 
       <!-- externals -->
       <div class="panel panel-primary">
@@ -110,36 +138,6 @@ title: Problem Solving Club
           </li>
         </ul>
       </div><!--./panel-->
-      
-      <!-- Social links -->
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Connect with us</h3>
-        </div><!--./panel-heading -->
-
-        <ul class="social-links list-inline">
-          <li><!-- Email -->
-            <a class="text-info" href="mailto:{{ site.email }}">
-              <i class="fa fa-envelope fa-2x"></i>
-            </a>
-          </li>
-          <li><!-- Facebook -->
-            <a class="text-info" href="{{ site.facebook }}">
-              <i class="fa fa-facebook fa-2x"></i>
-            </a>
-          </li>
-          <li><!-- Twitter -->
-            <a class="text-info" href="{{ site.twitter }}">
-              <i class="fa fa-twitter fa-2x"></i>
-            </a>
-          </li>
-          <li><!-- GitHub -->
-            <a class="text-info" href="{{ site.github }}">
-              <i class="fa fa-github fa-2x"></i>
-            </a>
-          </li>
-        </ul>
-      </div><!--./panel -->
 
     </div><!--./information -->
 
