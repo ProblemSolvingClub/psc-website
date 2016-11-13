@@ -3,7 +3,7 @@ title: "Wednesday Meeting - Dynamic Programming"
 layout: post
 ---
 
-<div class="col-md-6 col-lg-6">
+<div class="col-xs-12">
     This Wednesday, November 16, Dr. Hoyer will be teaching a session on 
     dynamic programming.
     <br><br>
