@@ -17,7 +17,7 @@ layout: post
     and possibly work on our website, leaderboard, or anything else that 
     you are interested in.
     <br><br>
-    Please apply by January 31, 2016 in order to be considered for a position.
+    Please apply by January 31, 2017 in order to be considered for a position.
     <br><br>
     <a class="btn btn-primary btn-sm" href="https://goo.gl/forms/1mUH4U3kVdnSPzeU2">Apply now</a>
     <br><br>
