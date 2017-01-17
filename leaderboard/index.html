@@ -25,6 +25,7 @@ title: Leaderboard
   <table class="table table-striped">
     <thead>
       <tr>
+        <th>&#35;</th>
         <th>Name</th>
         <th>Tier</th>
         <th>Total</th>
@@ -35,6 +36,7 @@ title: Leaderboard
     </thead>
     <tbody>
       <tr ng-repeat="user in vm.users | orderBy:'-totalSolved'">
+        <th ng-bind="$index + 1"></>
         <th ng-bind="vm.getUserDisplayName(user)"></th>
         <th ng-bind="vm.getTier(user.totalSolved).name"></th>
         <th ng-bind="vm.getDisplayScore(user.totalSolved)"></th>
