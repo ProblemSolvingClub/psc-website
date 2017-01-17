@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body{
+	background: #353535 url(http://psc.cpsc.ucalgary.ca/img/header-ccpc-2017.png) 0 180px;
+	background-size: 965px 500px;
+}
+</style>
+<meta charset="utf-8">
+<title>CCPC 2016 Random Prize Draw</title>
+<script>
+
+var officialContestants = "Tony,Cai,\nVictor,Zheng,\nAlbert,Luu,3 Guys 1 Comp\nAlfonso,Munoz,3 Guys 1 Comp\nAndrew,Heng,3 Guys 1 Comp\nAnthony,Tang,3FDL\nStepan,Fedorko-Bartos,3FDL\nYu-Hsiang,Wen,3FDL\nHarsimran,Parmar,Abstract\nManjot,Bal,Abstract\nDanny,Lewis,Byte Me\nManorie,Vachon,Byte Me\nSteven,Ho,Byte Me\nByron,Seto,CannonRush\nEnoch,Tsang,CannonRush\nAshish,Kansara,Cookies 'n' Code\nSeharish,Lakhani,Cookies 'n' Code\nshreya,Chopra,Cookies 'n' Code\nAbdul,Bahajaj,Cows\nAdarsh,Melethil,Cows\nAmine,Benaceur,Cows\nCamilo,Talero,crispy src code alert\nDavid,Sepulveda,crispy src code alert\nkent,wong,crispy src code alert\nAbdulrahman,Alnoaimi,Double Decker Couch\nHenry,Stoldt,Double Decker Couch\nLuke,Gagnon,Double Decker Couch\nMohsen,Ansari,Drumpf\nCalvin,Bochulak,e to the i pi\nGurveer,Sra,e to the i pi\nCharlie,Chong,Error418: I'm a teapot\nChristina,Lo,Error418: I'm a teapot\nLucas,Hossack,Error418: I'm a teapot\nAbigail,Oliver,Gabe's Angels\nBrad,Ritten,Gabe's Angels\nJohnny,Simmonds,Gabe's Angels\nAli,Akbari,I like cheese\nJustine,Bui,I like cheese\nNeil,Chulpongsatorn,I like cheese\nConnor,Muench,Indra sum yin muench\nIndra,Prasetyo,Indra sum yin muench\nKristie,Lok,Indra sum yin muench\nArash,Afshar,JustForFun\nTommy,Suh,Kappa\nYoungjoon,Ahn,Kappa\nAndrew,Zimmer,Lazer Volf\nJarrett,Spiker,Lazer Volf\nKendra,Wannamaker,Lazer Volf\nMunib,Rahman,Leave me alone\nAkash,Melethil,Liberal Arts Majors\nBryce,Besler,Liberal Arts Majors\nDave,Tran,May be 1 question\nMichael,Hoang,May be 1 question\nIan,Johnston,Oriented Towards Objects\nMarc,DeSorcy,Oriented Towards Objects\nBea,Esguerra,PB & J\nJerome,Adviento,PB & J\nPauline,Telan,PB & J\nMuyun,Cao,Pear\nPeng,Chen,Pear\nAndrejs,Gusakovs,PSCHack\nDavid,Wilkinson,PSCHack\nAnton,Lysov,Sputnik\nKhesualdo,Condori Barykin,Sputnik\nModan,Han,\"St. Petersburg National Research University of IT, ..\"\nRobert Alonso,Aduviri Choque,\"St. Petersburg National Research University of IT, ..\"\nNick,Brons,Sven's Test Icicles\nSpencer,Walton,Sven's Test Icicles\nSven,Zhang,Sven's Test Icicles\nDebbie,Macrohon,Talk Data to me\nHadiya,Firdaus,Talk Data to me\nJoanna,Huynh,Talk Data to me\nBlake,Mealey,Team Banana Bread\nCory,Jensen,Team Banana Bread\nDaniel,Kim,Team Banana Bread\nJan,Clarin,Team ZA\nJonathan,Wan,Team ZA\nShaheed,Ebrahim,Team ZA\nChris,Behan,Team43\nRyan,Pang,Team43\nMonir,Zaman,Tenacity\nRachel,Quapp,The Walking Thread\nScott,Ho,The Walking Thread\nThomas,Smith,The Walking Thread\nLinquan,Zhang,Thinking\nShunyi,Xu,Thinking\njiongkai,jiang,two newbies\nLin,Zuo,two newbies\nChristoper,Kinzel,Wahaj\nMIcheal,Friesen,Wahaj\nSiyuan,Ma,Wahaj\nAnna,Tran,We don't know what we're doing but we're still gonna show up\nScott,Saunders,We don't know what we're doing but we're still gonna show up\nVida,Jakovljevic,We don't know what we're doing but we're still gonna show up\nJenny,Le,Well Done Steak Is Done Well\nSean,Ovens,Well Done Steak Is Done Well\nSpencer,Manzon,Well Done Steak Is Done Well\nMartin,Tran,WeSuckAtTeamNames\nTeresa,Van,WeSuckAtTeamNames\nHannah,Rueb,Yellow Subroutine\nMuhammad,Taseer,Yellow Subroutine\nPujan,Bhatta,Yellow Subroutine";
+var ofSplit = officialContestants.split("\n");
+var ofArr = [];
+for (var i = 0; i < ofSplit.length; i++) {
+	var contestant = ofSplit[i].split(",");
+	ofArr.push([contestant[1], contestant[0], contestant[2]]);
+}
+ofArr.sort(function(a,b){if (a[1] < b[1]) return -1; if (a[1] == b[1]) return a[0] < b[0] ? -1 : (a[0] > b[0] ? 1 : 0); return 1;});
+var drawing = false;
+function draw() {
+	if (!drawing) return;
+	var idx = Math.floor(Math.random() * (ofArr.length));
+	document.getElementById("winner").innerHTML = ofArr[idx][1] + " " + ofArr[idx][0];
+	document.getElementById("team").innerHTML = ofArr[idx][2];
+}
+setInterval(draw, 10);
+</script>
+<style>
+body {
+	font: 20pt arial;
+	margin:0;
+}
+h1 {
+	font-size: 40pt;
+	margin:0;
+}
+.winnerBox {
+	font-size: 50pt;
+	border: 5px outset green;
+}
+input {
+	font-size: 20pt;
+}
+.blah {
+	background: #fff;
+	opacity: .95;
+	padding: 10px;
+}
+.ofList {
+	font-size: 15pt;
+}
+</style>
+</head>
+<body>
+<div class="blah">
+<h1>CCPC 2017 Random Prize Draw</h1>
+<input type="button" value="Start Draw" onclick="drawing = !drawing; this.value = (drawing) ? 'Stop Drawing' : 'Start Drawing'">
+And the winner is...
+<div class="winnerBox">
+<div id="winner"></div>
+<div id="team"></div>
+</div>
+<p class=ofList>
+<b>List of official contestants (<script>document.write(ofArr.length);</script>):</b>
+<script>for (var i = 0; i < ofArr.length; i++) document.write(ofArr[i][1] + " " + ofArr[i][0] + ", ");</script>
+</p>
+</div>
+</body>
+</html>
