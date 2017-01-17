@@ -16,4 +16,5 @@ layout: post
     ACPC, and the top 3 teams were the ones who were able to solve those problems.
     Understanding how to solve these problems might make the difference between 
     placing 15th and in the top 3.
+    <br><br>
 </div>
