@@ -45,11 +45,12 @@ title: Problem Solving Club
             <strong>
               <div class="text-info">{{ post.title }}</div>
             </strong>
-          </h4>
 
+            <!-- Post date -->
+            <small>{{ post.date | date: '%B %d, %Y' }}</small>
+          </h4>
           <!-- Post content -->
           <div>{{ post.content }}</div>
-
         </div> <!--./row-->
         {% endfor %}
       </div> <!--./post-->
