@@ -22,107 +22,55 @@ title: Problem Solving Club
       <p>
 	<strong>Welcome to the University of Calgary Problem Solving Club website.</strong>
 	If you enjoy programming, solving problems, and want to practice coding faster, more efficiently, and with fewer bugs, this is the place to be!
-	We meet every <u>Wednesday night from 6:00-7:30pm in MS 160</u> for coaching and practice. Saturday practice contests are also held regularly.
+  We meet every <u>Wednesday night from 6:00-7:30pm in MS 160</u> for coaching and practice. Saturday practice contests are also held regularly. To join the club, just join our mailing list.
       </p>
 
-      <!-- Learn more button -->
-      <a class="btn btn-primary btn-sm" href="/about" role="button">
-        Learn more
-      </a> 
+      <div>
+        <!-- Join mailing list -->
+        <a class="btn btn-primary btn-sm" href="http://mailman.ucalgary.ca/mailman/listinfo/psc-l" role="button">
+          Join mailing list
+        </a>
+      </div>
 
 
       <div class="page-header">
-	<!--./col problems -->
-	
         <h2>News</h2> 
       </div>
 
       <!-- News posts -->
       <div class="post">
-        {% for post in site.posts limit:10%}
+        {% for post in site.posts limit:3 %}
         <div class="row">
           <h4 class="post-title">
             <strong>
               <div class="text-info">{{ post.title }}</div>
             </strong>
-          </h4>
 
+            <!-- Post date -->
+            <small>{{ post.date | date: '%B %d, %Y' }}</small>
+          </h4>
           <!-- Post content -->
           <div>{{ post.content }}</div>
-
         </div> <!--./row-->
         {% endfor %}
       </div> <!--./post-->
     </div><!--./main-content -->
 
-
-
     <!-- Sidebar information -->
-
     <div class="col-xs-12 col-sm-4 col-md-3">
-
-      <!-- ACPC contest -->
       <div class="panel">
-        <!-- Set the current_practice_contest variable in _config.yml file to update contest URL -->
-        <a class="btn btn-info btn-block" href="http://psc.cpsc.ucalgary.ca/contests/acpc/2016/" role="button">
-	  Join ACPC 2016 Contest
+        <a class="btn btn-info btn-block" href="http://ccpc2017.eventbrite.ca" 
+          role="button">
+          Sign up for CCPC
+        </a>
+        <!-- Set the current_practice_contest variable in _config.yml file 
+          to update contest URL -->
+        <a class="btn btn-info btn-block" href="{{ site.current_practice_contest }}" 
+          role="button">
+          Current Practice Contest
         </a>
       </div><!-- ./panel -->
 
-       <!-- Join mailing list -->
-      <div class="panel">
-        <a class="btn btn-info btn-block" href="http://mailman.ucalgary.ca/mailman/listinfo/psc-l" role="button">
-          Join our mailing list
-        </a>
-      </div><!-- ./panel -->
-
-
-    
-
-      <!-- externals -->
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Our sponsors</h3>
-        </div><!--./panel-heading -->
-
-        <ul class="list-group">
-          <li class="list-group-item">
-            <a href="http://www.arcurve.com">
-              <img class="external-logo img-responsive" src="/img/logo-arcurve.png" alt="Arcurve">
-            </a>
-
-            <br>
-            <a class="text-center" href="http://www.coverity.com">
-              <img class="external-logo img-responsive" src="/img/logo-synopsys.png" alt="Coverity">
-            </a>
-            <br>
-            <a class="text-center" href="https://open.kattis.com/">
-              <img class="img-responsive" src="/img/kattis-logo.png" alt="Kattis">
-            </a>
-          </li>
-        </ul>
-
-      </div><!--./panel -->
-      
-        <!-- Practice -->
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Practice problems</h3>
-        </div><!--./panel-heading -->
-
-        <ul class="list-group">
-          <li class="list-group-item text-center">
-            <a class="text-info" href="//codeforces.com"><strong>Codeforces</strong></a>
-          </li>
-          <li class="list-group-item text-center">
-            <a class="text-info" href="//open.kattis.com"><strong>Kattis</strong></a>
-          </li>
-          <li class="list-group-item text-center">
-            <a class="text-info" href="//uva.onlinejudge.org"><strong>UVa Online Judge</strong></a>
-          </li>
-        </ul>
-      </div><!--./panel-->
-      
       <!-- Social links -->
       <div class="panel panel-primary">
         <div class="panel-heading">
@@ -152,6 +100,50 @@ title: Problem Solving Club
           </li>
         </ul>
       </div><!--./panel -->
+
+      <!-- externals -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Our sponsors</h3>
+        </div><!--./panel-heading -->
+
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a href="http://www.arcurve.com">
+              <img class="external-logo img-responsive" src="/img/logo-arcurve.png" alt="Arcurve">
+            </a>
+
+            <br>
+            <a class="text-center" href="http://www.coverity.com">
+              <img class="external-logo img-responsive" src="/img/logo-synopsys.jpg" alt="Coverity">
+            </a>
+            <br>
+            <a class="text-center" href="https://www.kattis.com/">
+              <img class="external-logo img-responsive" src="/img/logo-kattis.png" alt="Kattis">
+            </a>
+          </li>
+        </ul>
+
+      </div><!--./panel -->
+      
+        <!-- Practice -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Practice problems</h3>
+        </div><!--./panel-heading -->
+
+        <ul class="list-group">
+          <li class="list-group-item text-center">
+            <a class="text-info" href="//codeforces.com"><strong>Codeforces</strong></a>
+          </li>
+          <li class="list-group-item text-center">
+            <a class="text-info" href="//open.kattis.com"><strong>Kattis</strong></a>
+          </li>
+          <li class="list-group-item text-center">
+            <a class="text-info" href="//uva.onlinejudge.org"><strong>UVa Online Judge</strong></a>
+          </li>
+        </ul>
+      </div><!--./panel-->
 
     </div><!--./information -->
 
