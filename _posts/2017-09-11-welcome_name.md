@@ -5,7 +5,7 @@ layout: post
 
 <div class="col-md-12">
 Welcome back! The club wishes everyone the best in their semester. We have a lot of events in store so check back for updates. <br>
-Join our mailing list to ensure you don't miss out on updates and event sign-ups. We are also having our first meeting September 13th at 6pm in MS 160. See you then! 
+Join our mailing list to ensure you don't miss out on updates and event sign-ups. We are also having our first meeting September 20th at 6pm in MS 160. See you then! 
 <br><br>
 
 Officially this semester, Problem Solving Club (PSC) is renaming itself as Competitive Programming Club (CPC). This name change came about as a decision to better reflect the Club's history, mission, and competitive spirit. We still look forward to helping the undergraduate computer science base at large.  But we are focusing more than ever on instilling an attitude of learning and improving one's programming skills, especially in a competitive environment. <br>
