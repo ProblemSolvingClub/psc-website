@@ -1,3 +1,11 @@
+"""
+ Author: Thomas Vu
+ Discord: Thomas
+ Email: thomas.vu@ucalgary.ca
+
+ Feel free to send any questions about this problem
+ to the email above or ask in the CPC discord.
+"""
 def starsForRank():
     global rank
     if 25 >= rank >= 21: return 2

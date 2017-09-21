@@ -1,5 +1,6 @@
 /*
  Author: Martin Tran (based on Thomas Vu's Python solution)
+ Discord: Theo
  Email: martin.tran@ucalgary.ca
 
  Feel free to send any questions about this problem
