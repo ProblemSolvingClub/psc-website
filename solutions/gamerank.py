@@ -1,18 +1,15 @@
-"""
- Author: Thomas Vu
- Discord: Thomas
- Email: thomas.vu@ucalgary.ca
+# Author: Thomas Vu
+# Email: thomas.vu@ucalgary.ca
+# Feel free to send any questions about this problem to the email above
+# or ask in the CPC discord. (discord.gg/MEXwfze)
 
- Feel free to send any questions about this problem
- to the email above or ask in the CPC discord.
-"""
 def starsForRank():
     global rank
     if 25 >= rank >= 21: return 2
     if 20 >= rank >= 16: return 3
     if 15 >= rank >= 11: return 4
     if 10 >= rank >= 1:  return 5
-    else:                return 0
+    return 0
 
 def addStar():
     global rank, stars, reachedLegend
@@ -31,12 +28,12 @@ def loseStar():
     else:
         stars -= 1
 
-#######################################################
+#----------------------------------------------------------------------
 
 matchHistory = input()
-winStreak = 0
 rank = 25
 stars = 0
+winStreak = 0
 reachedLegend = False
 
 for game in matchHistory:

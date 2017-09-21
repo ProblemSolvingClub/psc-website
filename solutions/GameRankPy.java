@@ -1,10 +1,9 @@
 /*
- Author: Martin Tran (based on Thomas Vu's Python solution)
- Discord: Theo
+ Author: Martin Tran (Based off Thomas's Python3 solution)
  Email: martin.tran@ucalgary.ca
 
- Feel free to send any questions about this problem
- to the email above or ask in the CPC discord.
+ Feel free to send any questions about this problem to the email
+ above or ask in the CPC discord. (discord.gg/MEXwfze)
  */
 import java.util.Scanner;
 

@@ -1,10 +1,9 @@
 /*
  Author: Martin Tran
- Discord: Theo
  Email: martin.tran@ucalgary.ca
 
- Feel free to send any questions about this problem
- to the email above or ask in the CPC discord.
+ Feel free to send any questions about this problem to the email
+ above or ask in the CPC discord. (discord.gg/MEXwfze)
  */
 import java.util.Scanner;
 
