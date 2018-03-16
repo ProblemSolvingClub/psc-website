@@ -1,93 +1,64 @@
 <!doctype html>
 <html>
-<head>
-<style>
-body{
-	background: #353535 url(http://psc.cpsc.ucalgary.ca/img/header-ccpc-2017.png) 0 180px;
-	background-size: 965px 500px;
-}
-</style>
-<meta charset="utf-8">
-<title>CCPC 2017 Random Prize Draw</title>
-<script>
+  <head>
+    <style>
+      body {
+      background: #353535 url(http://psc.cpsc.ucalgary.ca/img/header-ccpc-2018.png) 0 180px;
+      background-size: 965px 500px;
+      }
 
-var officialContestants = "Justine,Bui,:^)\nEdwin,Zhang,//TODO: Team Name\nYaHeng,Su,//TODO: Team Name\nRiley,Baker,//TODO: Team Name\nbrent,kruger,\nAlex,Shymka,\nNicolas,Gonzalez,\nAlbert,Luu,3 Guys 1 Comp\nAndrew,Heng,3 Guys 1 Comp\nAlfonso,Munoz,3 Guys 1 Comp\nLoula,Agelopoulos,404 - Error: Team not found\nJackie,Yu,404 - Error: Team not found\nMohamed-Hani,Abdillahi,A_Team\nDennis,Duong,ALDEKO\nAlexander,Lam,ALDEKO\nKourosh,Banaeianzadeh,ALDEKO\nJeffrey,Shen,alwolfcon\nJacky,Tang,alwolfcon\nSean,Mai,alwolfcon\nNasir,Osman,BigO\nAhmad,Turkmani,BigO\nAhmed,elbannan,BigO\nJerome,ADVIENTO,BIT PLEASE!\nPauline,Telan,BIT PLEASE!\nDebbie,Macrohon,BIT PLEASE!\nRandy,Yee,BitBusters\nAndrejs,Gusakovs,BitBusters\nNizar,Maan,BitBusters\nSpencer,Manzon,Cache Me Ousside Howbow Dah\nJenny,Le,Cache Me Ousside Howbow Dah\nFarrah Shiela,Urmeneta,Cache Me Ousside Howbow Dah\nBernie,Mayer,Caustic Coders\nSteven,Ho,Caustic Coders\nKhesualdo,Condori,ChaCha\nJeffrey,Tong,Citrus\nParker,Wong,Citrus\nFrankie,Chen,Citrus\nMehrdad,Jafari Giv,CleverTeamName\nArash,Afshar,CleverTeamName\nUsman,Darwesh,CodeHELP\nRaymond,Duong,CodeHELP\nGordon,He,CodeHELP\nParva,Thaker,Death By Recursion\nLuke,Gagnon,Double Decker Couch\nHenry,Stoldt,Double Decker Couch\nHenry,Stoldt,Double Decker Couch\nDante,Bencivenga,Dr. X\nXining,Chen,Dr. X\nBrendan,Dueck,Dream Team\nJoanna,Huynh,Dream Team\nDavid,Lian,Dream Team\nCalvin,Bochulak,e^i2pi\nGurveer,Sra,e^i2pi\nBen,Roberts,ECPZ\nBlake,Mealey,ECPZ\nD,Dastoor,ECPZ\nAdarsh,Melethil,FatFlyingCows\nArteen,Razaee Anzabee,FatFlyingCows\nAndrew,Burton,Feisty Penguins\nSarah,Hatcher,Feisty Penguins\nTyrell,Jaques,Feisty Penguins\nAbigail,Oliver,Gabe's Angels\nBradley,Ritten,Gabe's Angels\nSammia,Abrar,Gabe's Angels\nBrian,Pho,Generic Types\nSadat,Islam,Generic Types\nHarjee,Johal,Generic Types\nManorie,Vachon,git clone ccpc-answers.git\nJames,MacIsaac,git clone ccpc-answers.git\nAlex,Todorovic,Google It\nAmanda,Leeson,Google It\nMason,Lieu,Google It\nJohn,Li,Hondo\nAndrei,Buiza,Hondo\nLucas,Hossack,Jayonatix Enjuhnirs\nChing,Tam,Jayonatix Enjuhnirs\nCharlie,Chong,Jayonatix Enjuhnirs\nSeyedaidin,Seyedaghazadeh,just here for the pizza\nCameron,Hardy,just here for the pizza\nSusant,Pant,just here for the pizza\nKristopher,Maxwell,JustMe\nHenrique,Pereira,Killer Rabbit of Caerbannog\nJuan Carlos,Fuentes Carranza,Killer Rabbit of Caerbannog\nCristobal,Martinez,Killer Rabbit of Caerbannog\nByron,Seto,KiRiToxXxAsUnAxXxByRoN\nYuxuan,Cai,KiRiToxXxAsUnAxXxByRoN\nDavid,Zhao,KiRiToxXxAsUnAxXxByRoN\nJarrett,Spiker,Lazer Volf\nKendra,Wannamaker,Lazer Volf\nSean,Ovens,Lazer Volf\nBryce,Besler,Liberal Arts Majors\nAkash,Melethil,Liberal Arts Majors\nChristopher,Behan,Lucriment\nRyan,Pang,Lucriment\nAnton,Lysov,Lucriment\nDave,Tran,Maplestory#1\nDuc,Do,Maplestory#1\nMichael,Hoang,Maplestory#1\nQuang Minh,Tran,Moore's In-Laws\nPeter,Fajner,Moore's In-Laws\nMichael,Han,Moore's In-Laws\nChris,Sun,Neon\nKevin,Lee,Neon\nWill,Zhuo,No Limit\nAlan,Fung,No Limit\nEvan,Quan,No Limit\nMark,Lin,NondeterministicTeamName\nBea,Esguerra,NondeterministicTeamName\nNick,Brons,NondeterministicTeamName\nTony,Cai,NOTICE: CCPC winner will be randomly selected\nVictor,Zheng,NOTICE: CCPC winner will be randomly selected\nColin,Thompson,Nybblers\nStuart,Seguin,Nybblers\nKyle,Storrier,Parthannax\nFatemeh,Hosseini,REAF\nFatemeh,Hosseini,REAF\nReza,Gholizadeh,REAF\nIsha,Afzaal,S.T.I.A\nSara,Tahniyat,S.T.I.A\nIan,Eliopoulos,Seniore's Pizza\nBrian,Yee,Seniore's Pizza\nMike,Simister,Seniore's Pizza\nTina,Huynh,Sexidecimals\nOre,Arowobusoye,Sexidecimals\nWilliam,Hong,Sexidecimals\nKhongorzul,Duurenbileg,ShreddingSomePow\nJunhee,Park,ShreddingSomePow\nJonathan,Choi,Stray\nSunny,Nagam,SunshineStudios\nKeenan,Gaudio,SunshineStudios\nNathanael,Huh,SunshineStudios\nNicole,Ewert,Tautological Redundancy\nEve,Chen,Tautological Redundancy\nEdrienne,Manalastas,Tautological Redundancy\nCumar,Yusuf,Team Cumar\nJan,Clarin,Team ZA\nShaheed,Ebrahim,Team ZA\njonathan,wan,Team ZA\nMalik,Wajdan,Team1131\nkent,wong,Turing like DP\nCamilo,Talero,Turing like DP\nDavid,Sepulveda,Turing like DP\nChris,Kinzel,Wahaj\nMicheal,Friesen,Wahaj\nThomas,Vu,WeDontSuckAtTeamNames\nMartin,Tran,WeDontSuckAtTeamNames\nTeresa,Van,WeDontSuckAtTeamNames\nQuang Minh,Tran,Winner\nMuhammad,Taseer,Yellow Subroutine\nHannah,Rueb,Yellow Subroutine";
-var ofSplit = officialContestants.split("\n");
-var ofArr = [];
-var winners = [];
-for (var i = 0; i < ofSplit.length; i++) {
-	var contestant = ofSplit[i].split(",");
-	ofArr.push([contestant[1], contestant[0], contestant[2]]);
-}
-ofArr.sort(function(a,b){if (a[1] < b[1]) return -1; if (a[1] == b[1]) return a[0] < b[0] ? -1 : (a[0] > b[0] ? 1 : 0); return 1;});
-var drawing = false;
-var mdelete = false;
-var idx
-function writeContestants() {
-  var html_to_write = "";
-  for (var i = 0; i < ofArr.length; i++)
-    html_to_write += ofArr[i][1] + " " + ofArr[i][0] + ", ";
-  document.getElementById("remaining_contestants").innerHTML = html_to_write;
-}
-function draw() {
-  if (!drawing) {
-    if (mdelete) {
-      ofArr.splice(idx, 1);
-      document.getElementById("contestant_count").innerHTML = "List of official contestants (" + ofArr.length + ")";
-      writeContestants();
-    }
-    mdelete = false;
-    return;
-  }
-  mdelete = true;
-	idx = Math.floor(Math.random() * (ofArr.length));
-	document.getElementById("winner").innerHTML = ofArr[idx][1] + " " + ofArr[idx][0];
-	document.getElementById("team").innerHTML = ofArr[idx][2];
-}
-setInterval(draw, 10);
-</script>
-<style>
-body {
-	font: 20pt arial;
-	margin:0;
-}
-h1 {
-	font-size: 40pt;
-	margin:0;
-}
-.winnerBox {
-	font-size: 50pt;
-	border: 5px outset green;
-}
-input {
-	font-size: 20pt;
-}
-.blah {
-	background: #fff;
-	opacity: .95;
-	padding: 10px;
-}
-.ofList {
-	font-size: 15pt;
-}
-</style>
-</head>
-<body>
-<div class="blah">
-<h1>CCPC 2017 Random Prize Draw</h1>
-<input type="button" value="Start Draw" onclick="drawing = !drawing; this.value = (drawing) ? 'Stop Drawing' : 'Start Drawing'">
-And the winner is...
-<div class="winnerBox">
-<div id="winner"></div>
-<div id="team"></div>
-<div id="test"></div>
-</div>
-<p class=ofList>
-<b id="contestant_count">List of official contestants (<script>document.write(ofArr.length);</script>):</b>
+    </style>
+    <meta charset="utf-8">
+    <title>CCPC 2018 Random Prize Draw</title>
 
-<a id="remaining_contestants"><script>  for (var i = 0; i < ofArr.length; i++) document.write(ofArr[i][1] + " " + ofArr[i][0] + ", ");
-</script></a>
-</p>
-</div>
-</body>
+    <style>
+      body {
+      font: 20pt arial;
+      margin: 0;
+      }
+
+      h1 {
+      font-size: 40pt;
+      margin: 0;
+      }
+
+      .winnerBox {
+      font-size: 50pt;
+      border: 5px outset green;
+      }
+
+      input {
+      font-size: 20pt;
+      }
+
+      .blah {
+      background: #fff;
+      opacity: .95;
+      padding: 10px;
+      }
+
+      .ofList {
+      font-size: 15pt;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="blah">
+      <h1>CCPC 2018 Random Prize Draw</h1>
+      <input id="button" type="button" value="Start Draw">
+      <div class="winnerBox">
+        <div id="winner"></div>
+        <div id="team"></div>
+        <div id="test"></div>
+      </div>
+      <p class=ofList>
+        <b id="contestant_count"></b>
+        <a id="remaining_contestants"></a>
+      </p>
+    </div>
+  </body>
+
+  <script src="draw.js"></script>
 </html>
