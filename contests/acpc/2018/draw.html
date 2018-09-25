@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ACPC 2017 Random Prize Draw</title>
+<script>
+
+var officialContestants = "Adeel,Bhalo,We_R_Assassins.exe not old one \nAkash,Melethil,Liberal Arts Majors \nAlan,Fung,No Limit \nAlbert,Luu,3 Guys 1 Comp \nAlex,Bymoen,GreyHatARS \nAlex,Shymka,Booleens & Cachés \nAlfonso,Munoz,3 Guys 1 Comp \nAlyssa,Herbst, \nAndrew,Heng,3 Guys 1 Comp \nAnna,Tran,Uchuujin \nArtemiss,Rahim,We_R_Assassins.exe not old one \nBasim,Sahaf,smrt \nBen,Roberts,Synerys \nBenjamin,Lee,Old people \nBlake,Mealey,Synerys \nBrenton,Kruger,Booleens & Cachés \nBrian,Pho,EzPz \nBryce,Besler,Liberal Arts Majors \nCalvin,Bochulak, \nCamila,Viltres, \nChenlei(Iris),Bao,Dracarys \nChris,Sun, \nChristian,Dudar,Freedom35 \nChristian,Velasco, \nChristilyn,Arjona,team++ \nDabin,Lamming,Old people \nDaniel,Do,Bae & Sole \nDaniel,Doran,Dracarys \nDante,Bencivenga,while (!problems.isEmpty()) {problems.solveNext();} \nDavid,Sepulveda, \nDevon,Hockley, \nEddy,Qiang,1337 \nElvin,Limpin,team++ \nErik,Skoronski,West Coast Wingnuts \nErika,Fung,SWAG LAB 2K17 \nEvan,Quan,No Limit \nFrankie,Chen,Citrus \nHadiya,Firdaus,Timbytes \nHansel,Qiu,while (!problems.isEmpty()) {problems.solveNext();} \nHarjee,Johal,EzPz \nHenry,Stoldt, \nJackie,Yu,Running Roast Anacondas \nJaime,Castill,Timbytes \nJames,Peralta, \nJeffrey,Tong,Citrus \nJerome,Adviento,Bae & Sole \nJoanna,Huynh,Timbytes \nJordan,Lee,n0va \nKarl,Augsten, \nKeenan,Gaudio,CrackinACodeOne \nKendra,Wannamaker,LittleRedandTheBigBadVolf \nKenneth,Hancock,If we were a spice, We'd be flour \nKevin,Lee,n0va \nKhesualdo,Condori, \nLoula,Angelopolous,Running Roast Anacondas \nLucas,Hossack, \nMaggie,Liu,smrt \nMark,Ricalde, \nMartin,Tran,Potato Nugget and Martini \nMasroor,Syed,We_R_Assassins.exe not old one \nMichael,Han, \nMichael,Hoang,Bae & Sole \nMicheal,Friesen,If we were a spice, We'd be flour \nMilan,Radenovic,Freedom35 \nMunsu,Hwang,1337 \nNicolas,Gonzalez,Booleens & Cachés \nNicole,Ewert,SWAG LAB 2K17 \nNikolas,Lam, \nParker,Robinson, \nParker,Wong,Citrus \nPossum,Nuada,smrt \nRaza,Qazi,GreyHatARS \nReginald,Lybbert, \nRobert,Fiker, \nSadat,Islam,EzPz \nSajad,Sameti,The Stepdads (we beat you and you can't stand us) \nSamuel,Niu,Freedom35 \nSandeep,Kollannur,The Stepdads (we beat you and you can't stand us) \nSean,Ovens,LittleRedandTheBigBadVolf \nShaheed,Ebrahim,Uchuujin \nSharon,Wang,GreyHatARS \nShuJi,Chen,1337 \nSunny,Nagam,CrackinACodeOne \nTeresa,Van,Potato Nugget and Martini \nThomas, Vu, Potato Nugget and Martini \nTom,Maurer,SWAG LAB 2K17 \nTony,Cai,Eyjafjallajökull \nVanessa,Arndorfer, \nVictor,Zheng,Eyjafjallajökull \nWilliam,Wright, \nXining,Chen,Old people \nYousaf,Raja,No Limit \nZachariah,Albers,Dracarys \nZachary,Kahn,West Coast Wingnuts \nZahra,Ghavasieh, ";
+var ofSplit = officialContestants.split("\n");
+var ofArr = [];
+var winners = [];
+for (var i = 0; i < ofSplit.length; i++) {
+	var contestant = ofSplit[i].split(",");
+	ofArr.push([contestant[1], contestant[0], contestant[2]]);
+}
+ofArr.sort(function(a,b){if (a[1] < b[1]) return -1; if (a[1] == b[1]) return a[0] < b[0] ? -1 : (a[0] > b[0] ? 1 : 0); return 1;});
+var drawing = false;
+var mdelete = false;
+var idx
+function writeContestants() {
+  var html_to_write = "";
+  for (var i = 0; i < ofArr.length; i++)
+    html_to_write += ofArr[i][1] + " " + ofArr[i][0] + ", ";
+  document.getElementById("remaining_contestants").innerHTML = html_to_write;
+}
+function draw() {
+  if (!drawing) {
+    if (mdelete) {
+      ofArr.splice(idx, 1);
+      document.getElementById("contestant_count").innerHTML = "List of official contestants (" + ofArr.length + ")";
+      writeContestants();
+    }
+    mdelete = false;
+    return;
+  }
+  mdelete = true;
+	idx = Math.floor(Math.random() * (ofArr.length));
+	document.getElementById("winner").innerHTML = ofArr[idx][1] + " " + ofArr[idx][0];
+	document.getElementById("team").innerHTML = ofArr[idx][2];
+}
+setInterval(draw, 10);
+</script>
+<style>
+body {
+	font: 20pt arial;
+	margin:0;
+}
+h1 {
+	font-size: 40pt;
+	margin:0;
+}
+.winnerBox {
+	font-size: 50pt;
+	border: 5px outset green;
+}
+input {
+	font-size: 20pt;
+}
+.blah {
+	background: #fff;
+	opacity: .95;
+	padding: 10px;
+}
+.ofList {
+	font-size: 15pt;
+}
+</style>
+</head>
+<body>
+<div class="blah">
+<h1>ACPC 2017 Random Prize Draw</h1>
+<input type="button" value="Start Draw" onclick="drawing = !drawing; this.value = (drawing) ? 'Stop Drawing' : 'Start Drawing'">
+And the winner is...
+<div class="winnerBox">
+<div id="winner"></div>
+<div id="team"></div>
+<div id="test"></div>
+</div>
+<p class=ofList>
+<b id="contestant_count">List of official contestants (<script>document.write(ofArr.length);</script>):</b>
+
+<a id="remaining_contestants"><script>  for (var i = 0; i < ofArr.length; i++) document.write(ofArr[i][1] + " " + ofArr[i][0] + ", ");
+</script></a>
+</p>
+</div>
+</body>
+</html>
