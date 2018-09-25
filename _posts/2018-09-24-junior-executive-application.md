@@ -5,7 +5,7 @@ layout: post
 
 <div class="col-md-12">
 <br>
-Welcome to a new school year! CPC is now looking for junior executives! This means that you can learn what it's like to be an executive while being along side a current executive!
+Welcome to a new school year! CPC is now looking for junior executives! This means that you can learn what it's like to be an executive while being along side a current executive! They will also be taking over next term. How exciting!
 <br>
 <p>
 <br>
