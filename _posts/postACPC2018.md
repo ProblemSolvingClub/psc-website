@@ -1,0 +1,29 @@
+---
+title: "ACPC 2018 Winners!"
+layout: post
+---
+
+<div class="col-md-12">
+<p><p>
+Thank you to everyone who participated, volunteered, and to Arcurve for sponsoring this years Alberta Collegiate Programming Contest! Many teams fought hard to place as high as possible but a few teams stood out about the rest. Here are the official results:
+<p>
+Div 1: 1st place, "Off-by-One Error" <br>
+Div 1: 2nd place, "Alberta Gold" <br>
+Div 1: 3rd place, "Coesun" <br>
+<p>
+Div 2: 1st place, "Bullfrogs" <br>
+Div 2: 2nd place, "Leo Gao" <br>
+<p>
+Congratulations to all the winners!
+<br>
+For full results please visit: <a href="https://acpc18.kattis.com/standings">https://acpc18.kattis.com/standings</a>
+<br>
+Again, I would like to thank everyone who participated and made this event possible
+
+<br>
+
+
+<br><br>
+
+<br>
+</div>
