@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+      background: #353535 url(http://psc.cpsc.ucalgary.ca/img/header-ccpc-2018.png) 0 180px;
+      background-size: 965px 500px;
+      }
+
+    </style>
+    <meta charset="utf-8">
+    <title>CCPC 2018 Random Prize Draw</title>
+
+    <style>
+      body {
+      font: 20pt arial;
+      margin: 0;
+      }
+
+      h1 {
+      font-size: 40pt;
+      margin: 0;
+      }
+
+      .winnerBox {
+      font-size: 50pt;
+      border: 5px outset green;
+      }
+
+      input {
+      font-size: 20pt;
+      }
+
+      .blah {
+      background: #fff;
+      opacity: .95;
+      padding: 10px;
+      }
+
+      .ofList {
+      font-size: 15pt;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="blah">
+      <h1>CCPC 2018 Random Prize Draw</h1>
+      <input id="button" type="button" value="Start Draw">
+      <div class="winnerBox">
+        <div id="winner"></div>
+        <div id="team"></div>
+        <div id="test"></div>
+      </div>
+      <p class=ofList>
+        <b id="contestant_count"></b>
+        <a id="remaining_contestants"></a>
+      </p>
+    </div>
+  </body>
+
+  <script src="draw.js"></script>
+</html>
