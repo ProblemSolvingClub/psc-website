@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
   <div class="container-fluid">
     <!-- Navbar brand and collapse toggle -->
     <div class="navbar-header">
@@ -10,7 +10,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">
-        <img class="navbar-logo" src="/img/new-logo-small-cpc.png" alt="Logo">
+        <img class="navbar-logo" src="/img/cpc_logo/white-small.png" alt="Logo">
       </a>
     </div><!-- /.navbar-header -->
 
@@ -18,8 +18,20 @@
     <div class="navbar-collapse collapse" id="navbar">
       <ul class="nav navbar-nav navbar-right">
 
-        <li{% if page.url == '/about/index.html' %} class="active"{% endif %}>
+      <li{% if page.url == '' %} class="active"{% endif %}>
+        <a href="/">Home</a>
+      </li>
+
+        <li{% if page.url == '/about/index.html/' %} class="active"{% endif %}>
           <a href="/about">About</a>
+        </li>
+
+        <li{% if page.url == '/blog/index.html' %} class="active"{% endif %}>
+          <a href="/blog">Blog</a>
+        </li>
+
+        <li{% if page.url == '/calendar/index.html' %} class="active"{% endif %}>
+          <a href="/calendar/">Calendar</a>
         </li>
 
         <li class="dropdown">

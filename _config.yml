@@ -1,4 +1,5 @@
 # Site settings
+# Note: Any updated settings will not be shown on static preview UNLESS you rebuild the site!
 title: Competitive Programming Club
 baseurl: ""
 url: "http://cpc.cpsc.ucalgary.ca"
@@ -6,6 +7,9 @@ email: psc.uofc@gmail.com
 facebook: https://www.facebook.com/CompetitiveProgrammingClub
 twitter: https://twitter.com/ucalgary_cpc
 github: https://github.com/ProblemSolvingClub
+discord: https://discordapp.com/invite/MEXwfze
+newsletter: https://mailman.ucalgary.ca/mailman/listinfo/psc-l
+
 
 current_practice_contest: /practice/2017-03-15/
 

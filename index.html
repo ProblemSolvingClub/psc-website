@@ -3,176 +3,203 @@ layout: default
 title: Competitive Programming Club
 ---
 
-<div class="container">
+<div class="container-fluid">
+    <!-- Container for gradient -->
+    <div class = "row center-h gradient-m col-m">
+        
+        <div class="col-sm-6 main-box"> 
+            <div class = "recent-posts-title">RECENT POSTS</div>
+           
+                {% for post in site.posts limit:1 %}
 
-  <div class="row">
-    <!-- Main content -->
-    <div class="main-content col-xs-12 col-sm-8 col-md-9">
+                <!--Image displayed-->
+                <div class = main-img-container>
+                    <img class = "img-fluid main-post-img" src="{{ post.imgurl }}"> 
+                </div>
+                               
+                  
+             
+                <div class = "entire-post">
+                  <h4 class="post-title">
+                    <strong>
+                      {{ post.title }} 
+                    </strong>
+                </h4>
+        
+                    <!-- Post date -->
+                    <p class = post-date>{{ post.date | date: '%B %d, %Y' }}</p>
+                  
+                  <!-- Post content -->
+                  <div class = "main-post-content">
+                   <!-- {% if post.contestPost == true %}-->
 
-      <!-- Banner 
-      <div class="banner">
-        <img class="img-responsive" src="/img/new-banner.png" alt="Banner">
-      </div> -->
+                    <a class="btn btn-info main-post-btn" href="http://cpc.cpsc.ucalgary.ca/contests/ccpc/2020/index.html" role="button" target="_blank">
+                        Info
+                        </a>
+                    <a class="btn btn-info main-post-btn" href="http://cpc.cpsc.ucalgary.ca/contests/ccpc/2020/index.html" role="button" target="_blank">
+                        Sign Up
+                        </a>
 
-      <!-- Welcome message -->
-      <div class="page-header">
-        <h2>Welcome</h2>
-      </div>
+                        <p class = main-post></p>{{ post.text }}</p></div>
+                        <br>...</br>
+                        <div class = "read-more">Read more</div>
+                    
+                
 
-      <!-- Description -->
-      <p>
-	<strong>Welcome to the University of Calgary Competitive Programming Club website.</strong>
-	If you enjoy programming, solving problems, and want to practice coding faster, more efficiently, and with fewer bugs, this is the place to be!
-  We meet every <u>Wednesday night from 6:00-7:30pm in MS 160</u> for coaching and practice. Saturday practice contests are also held regularly. To join the club, just join our mailing list.
-      </p>
+                    <!--{% endif %}-->
+                    </div>              
+                  
+                    
+                    
+               
+         
+  
+                {% endfor %}
 
-      <div>
-        <!-- Join mailing list -->
-        <a class="btn btn-primary btn-sm" href="http://mailman.ucalgary.ca/mailman/listinfo/psc-l" role="button">
-          Join mailing list
-        </a>
-
-        <!-- Join Discord server -->
-        <a class="btn btn-primary btn-sm" href="https://discordapp.com/invite/MEXwfze"role="button">
-          Join Discord server
-        </a>
-
-	<!-- Link to Wen's Codebook -->
-        <a class="btn btn-primary btn-sm" href="https://github.com/ProblemSolvingClub/psc/blob/master/codebook2016/UofC_Notebook_2016.pdf"role="button">
-          Get Wen's code book
-        </a>
-		
-		<!-- Junior executive application-->
-      </div>
-
-
-      <div class="page-header">
-        <h2>News</h2> 
-      </div>
-
-      <!-- News posts -->
-      <div class="post">
-        {% for post in site.posts limit:3 %}
-        <div class="row">
-          <h4 class="post-title">
-            <strong>
-              <div class="text-info">{{ post.title }}</div>
-            </strong>
-
-            <!-- Post date -->
-            <small>{{ post.date | date: '%B %d, %Y' }}</small>
-          </h4>
-          <!-- Post content -->
-          <div>{{ post.content }}</div>
-        </div> <!--./row-->
-        {% endfor %}
-      </div> <!--./post-->
-    </div><!--./main-content -->
-
-    <!-- Sidebar information -->
-    <div class="col-xs-12 col-sm-4 col-md-3">
-
-      <!-- Social links -->
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Connect with us</h3>
-        </div><!--./panel-heading -->
-
-        <ul class="social-links list-inline">
-          <li><!-- Email -->
-            <a class="text-info" href="mailto:{{ site.email }}">
-              <i class="fa fa-envelope fa-2x"></i>
-            </a>
-          </li>
-          <li><!-- Facebook -->
-            <a class="text-info" href="{{ site.facebook }}">
-              <i class="fa fa-facebook fa-2x"></i>
-            </a>
-          </li>
-          <li><!-- Twitter -->
-            <a class="text-info" href="{{ site.twitter }}">
-              <i class="fa fa-twitter fa-2x"></i>
-            </a>
-          </li>
-          <li><!-- GitHub -->
-            <a class="text-info" href="{{ site.github }}">
-              <i class="fa fa-github fa-2x"></i>
-            </a>
-          </li>
-        </ul>
-      </div><!--./panel -->
-
-      <!-- externals -->
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Our sponsors</h3>
-        </div><!--./panel-heading -->
-
-        <ul class="list-group">
-          <li class="list-group-item">
-            <a href="http://www.arcurve.com">
-              <img class="external-logo img-responsive" src="/img/logo-arcurve.png" alt="Arcurve">
-            </a>
-            <br>
-            <a class="text-center" href="http://www.coverity.com">
-              <img class="external-logo img-responsive" src="/img/logo-synopsys.jpg" alt="Coverity">
-            </a>
-            <br>
-            <a class="text-center" href="https://www.kattis.com/">
-              <img class="external-logo img-responsive" src="/img/logo-kattis.png" alt="Kattis">
-            </a>
-            <br>
-            <a class="text-center" href="https://www.google.com/">
-              <img class="external-logo img-responsive" src="/img/logo-google.png" alt="Google">
-            </a>
-          </li>
-        </ul>
-
-      </div><!--./panel -->
-      
-        <!-- Practice -->
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Practice problems</h3>
-        </div><!--./panel-heading -->
-
-        <ul class="list-group">
-          <li class="list-group-item text-center">
-            <a class="text-info" href="//codeforces.com"><strong>Codeforces</strong></a>
-          </li>
-          <li class="list-group-item text-center">
-            <a class="text-info" href="//open.kattis.com"><strong>Kattis</strong></a>
-          </li>
-          <li class="list-group-item text-center">
-            <a class="text-info" href="//uva.onlinejudge.org"><strong>UVa Online Judge</strong></a>
-          </li>
-        </ul>
-      </div><!--./panel-->
-
-      <!-- Important Dates -->
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Important Dates</h3>
+           
+           
+            
         </div>
 
-        <ul class="list-group">
-          <li class="list-group-item text-center">
-            <a class="text-info" href="//www.cs.uleth.ca/~cheng/LCPC/"><strong>Lethbridge Collegiate Programming Contest - Sept 29</strong></a>
-          </li>
-          <li class="list-group-item text-center">
-            <a class="text-info" href="//cs.baylor.edu/~hamerly/icpc/qualifier_2018/"><strong>2018 ICPC North America Qualifier (NAQ) - Oct 6</strong></a>
-          </li>
-          <li class="list-group-item text-center">
-            <a class="text-info" href="//cpc.cpsc.ucalgary.ca/contests/acpc/2018/"><strong>Alberta Collegiate Programming Contest (ACPC) - Oct 27</strong></a>
-          </li>
-          <li class="list-group-item text-center">
-            <a class="text-info" href="//org.coloradomesa.edu/~wmacevoy/rmrc/2017/"><strong>Rocky Mountain Regional Contest (RMRC) - Nov 3</strong></a>
-          </li>
-        </ul>
-      </div><!--./panel-->
+        <div class="col-sm-6 col-xs-12 col-md-9 welcome-box"> 
+            <h3 class = "welcome"> Welcome </h3>
+            <p class = "welcome">
+                Welcome to the University <br>of <b>Calgary Competitive Programming Club</b> website. 
+                We meet every Wednesday night from 6:00-7:30pm in MS 160 for coaching and practice. 
+                Saturday practice contests are also often held. To join the club, just join our <u>mailing list</u>.
+            </br>
+            </p>
+            
+            
+            <button class = "kattis-button" title = "No contest right now, have a great summer!">                
+                <b>Current Kattis Contest</b>                                         
+            </button>
 
-    </div><!--./information -->
+            
+       
+        </div>   
+    </div>
 
-  </div><!--./row -->
+    <div class = "row">
+        <div class="col-xs-12 col-sm-10 col-md-3 col-sm-push-1">
 
-</div><!--./container -->
+            <!-- Social links -->
+            <div class="panel panel-primary no-radius">
+                <div class="panel-heading no-radius">
+                <h3 class="panel-title-b"> Connect with us </h3>
+                </div><!--./panel-heading -->
+
+                <ul class="social-links list-inline">
+
+                <li><!-- Newsletter -->
+                    <a class="text-info" href="{{ site.newsletter }}">
+                        <i class="far fa-newspaper fa-3x fa-icon"></i>
+                    </a>
+                </li>
+                <li><!-- Discord -->
+                    <a class="text-info" href="{{ site.discord }}">
+                        <i class="fab fa-discord fa-3x fa-icon"></i>
+                    </a>
+                </li>
+                <li><!-- Facebook -->
+                    <a class="text-info" href="{{ site.facebook }}">
+                    <i class="fab fa-facebook-square fa-3x fa-icon"></i>
+                    </a>
+                </li>
+
+                <br>
+                <li><!-- Twitter -->
+                    <a class="text-info" href="{{ site.twitter }}">
+                    <i class="fab fa-twitter-square fa-3x fa-icon-2"></i>
+                    </a>
+                </li>
+                <li><!-- GitHub -->
+                    <a class="text-info" href="{{ site.github }}">
+                    <i class="fab fa-github-square fa-3x fa-icon"></i>
+                    </a>
+                </li>
+                <li><!-- Email -->
+                    <a class="text-info" href="mailto:{{ site.email }}">
+                        <i class="far fa-envelope fa-3x fa-icon-2"></i>
+                    </a>
+                </li>
+                </br>
+                </ul>
+            </div><!--./panel -->
+        </div>
+
+        <div class="col-xs-12 col-sm-10 col-md-3 col-sm-push-1">
+            <div class="panel panel-primary no-radius">
+                <div class="panel-heading no-radius">
+                    <h3 class="panel-title-b"> Connect with us </h3>
+                </div><!--./panel-heading -->
+                
+                    <div class="panel-body fixed-panel">                      
+                        <p><b>Junior VP Academic: </b>
+                        We are currently looking for people who are interested in giving online lectures. 
+                        It's a great way solidify your knowledge on algorithm concepts. +Application</p> 
+                    </div>
+                
+             
+            
+            </div><!--./panel -->
+        </div>
+
+        <div class="col-xs-12 col-sm-10 col-md-4 col-sm-push-1">
+            <div class="panel panel-primary no-radius">
+                <div class="panel-heading no-radius">
+                  <h3 class="panel-title-b">Sponsors</h3>
+                </div><!--./panel-heading -->
+                    <div class="panel-body fixed-panel">
+                        <ul class="sponsors list-inline">
+                        
+                            <li>
+                                <a class="text-center" href="https://www.google.com/">
+                                    <img class="img-fluid external-logo" src="/img/logo-google.png" alt="Google">
+                                </a>
+                                
+                            
+                            </li>     
+                            <li>
+                                <a class="text-center" href="https://www.kattis.com/">
+                                    <img class="img-fluid external-logo" src="/img/logo-kattis.png" alt="Kattis">
+                                </a>
+
+                            </li>               
+                            
+                        
+                            <br>
+                                <li>
+                                    <a class="text-center" href="https://www.synopsys.com/software-integrity.html">
+                                        <img class="img-fluid external-logo-2" src="/img/logo-synopsys-3.png" alt="Synopsys">
+                                    </a>                               
+                                </li>
+
+                                <li>
+                                    <a class="text-center" a href="http://www.arcurve.com">
+                                        <img class="img-fluid external-logo-3" src="/img/logo-arcurve.png" alt="Arcurve">
+                                    </a>      
+
+                                </li>
+                            </br>
+                        
+                                    
+                            
+                        
+                        
+                        </ul>
+                    </div>
+        
+            </div><!--./panel -->
+        </div>
+
+
+        
+    </div>
+
+
+
+
+
+</div>
+
