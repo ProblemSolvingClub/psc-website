@@ -82,6 +82,11 @@ a.active  {
   height:80px;  
 }
 
+.navbar-default .navbar-nav .open .dropdown-menu>li> a, .navbar-default .navbar-nav .open .dropdown-menu {
+  background-color: white;
+  color:black;
+}
+
 .banner img {
   max-width: 90%;
   max-height: 120px;
@@ -199,13 +204,13 @@ p.post-date{
 
 .panel-body{
   text-align: center;
-  font-size: 18px;
+  font-size: 17px;
   margin: auto;
   width: 50%;
+  line-height: 1.;
  /*  margin-left: 5%;
   margin-right:5%;   */
 }
-
 
 .fixed-panel { 
   margin-top: 0px; 
@@ -406,6 +411,10 @@ p.welcome{
   display: block;
 }
 
+.toggle-pos{
+  margin-top:20px;
+}
+
 /* Responsive iFrame */
 .responsive-iframe-container {
   position: relative;
@@ -426,6 +435,43 @@ p.welcome{
   border: none;
 }
 
+/* Toggle breakpoint, change for bootstrap 4.5 */
+@media (max-width: 1000px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+}
 
 @media (max-width: 1048px) {
 
