@@ -1,75 +1,55 @@
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+<nav class="navbar navbar-expand-lg py-0 navbar-custom static-top">
   <div class="container-fluid">
+
     <!-- Navbar brand and collapse toggle -->
-    <div class="navbar-header">
-      <button class="navbar-toggle collapsed toggle-pos" type="button" data-toggle="collapse"
-              data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <!--Hamburger icon lines-->
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">
-        <img class="navbar-logo" src="/img/cpc_logo/white-small.png" alt="Logo">
-      </a>
-    </div><!-- /.navbar-header -->
+    <a class="navbar-brand" href="#">
+      <img class="navbar-logo" src="/img/cpc_logo/white-small.png" alt="Logo">
+    </a>        
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
 
-    <!-- Navbar items -->
-    <div class="navbar-collapse collapse" id="navbar">
-      <ul class="nav navbar-nav navbar-right">
-
-      <li{% if page.url == '' %} class="active"{% endif %}>
-        <a href="/">Home</a>
-      </li>
-
-        <li{% if page.url == '/about/index.html/' %} class="active"{% endif %}>
-          <a href="/about">About</a>
+        <li class="nav-item{% if page.url == '' %} class="active"{% endif %}">
+          <a class="nav-link" id="single" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
 
-        <li{% if page.url == '/blog/index.html' %} class="active"{% endif %}>
-          <a href="/blog">Blog</a>
+        <li class="nav-item"{% if page.url == '/about/index.html/' %} class="active"{% endif %} >
+          <a class="nav-link" id="single" href="/about">About</a>
         </li>
 
-        <li{% if page.url == '/calendar/index.html' %} class="active"{% endif %}>
-          <a href="/calendar/">Calendar</a>
+        <li class="nav-item"{% if page.url == '/blog/index.html/' %} class="active"{% endif %} >
+          <a class="nav-link" id="single" href="/blog">Blog</a>
         </li>
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contests<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li{% if page.url == '/contests/acpc/index.html' %} class="active"{% endif %}>
-              <a href="/contests/acpc">ACPC</a>
-            </li>
-            <li{% if page.url == '/contests/ccpc/index.html' %} class="active"{% endif %}>
-              <a href="/contests/ccpc">CCPC</a>
-            </li>
-            <li{% if page.url == '/contests/practice/index.html' %} class="active"{% endif %}>
-              <a href="/contests/practice">Other</a>
-            </li>
-          </ul>
+        <li class="nav-item"{% if page.url == '/calendar/index.html' %} class="active"{% endif %} >
+          <a class="nav-link" id="single" href="/calendar">Calendar</a>
         </li>
 
-        <li{% if page.url == '/leaderboard/index.html' %} class="active"{% endif %}>
-        <a href="/leaderboard">Leaderboard</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="single" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Contests
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/contests/acpc">ACPC</a>
+            <a class="dropdown-item" href="/contests/ccpc">CCPC</a>            
+            <a class="dropdown-item" href="/contests/practice">Other</a>
+          </div>
+        </li>  
+
+        <li class="nav-item"{% if page.url == '/leaderboard/index.html' %} class="active"{% endif %}>
+          <a class="nav-link" id="single" href="/leaderboard">Leaderboard</a>
+        </li>     
+
+        <li class="nav-item"{% if page.url == '/resources/index.html' %} class="active"{% endif %}>
+          <a class="nav-link" id="single" href="/resources">Resources</a>
         </li>
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Presentations<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li{% if page.url == '/presentations/weekly-meetings/index.html' %} class="active"{% endif %}>
-              <a href="/presentations/weekly-meetings/">Weekly Meetings</a>
-            </li>
-            <li{% if page.url == '/presentations/workshops/index.html' %} class="active"{% endif %}>
-              <a href="/presentations/workshops/">Workshops</a>
-            </li>
-          </ul>
-        </li>
 
-        <li{% if page.url == '/resources/index.html' %} class="active"{% endif %}>
-          <a href="/resources">Resources</a>
-        </li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container -->
+    </div>
+
+  </div>
 </nav>

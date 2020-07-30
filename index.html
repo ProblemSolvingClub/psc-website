@@ -3,19 +3,20 @@ layout: default
 title: Competitive Programming Club
 ---
 
-<div class="container-fluid">
+<div class="container-fluid col-h">
     <!-- Container for gradient -->
-    <div class = "row center-h gradient-m col-m">
+    <div class = "row center-h gradient-m">
         
-        <div class="col-sm-6 main-box"> 
+        <div class="col-xs-12 col-sm-11 col-md-11 mr-1 main-box"> 
+            
             <div class = "recent-posts-title">RECENT POSTS</div>
            
-                {% for post in site.posts limit:1 %}
+            {% for post in site.posts limit:1 %}
 
-                <!--Image displayed-->
-                <div class = main-img-container>
-                    <img class = "img-fluid main-post-img" src="{{ post.imgurl }}"> 
-                </div>
+            <!--Image displayed-->
+            <div class = main-img-container>
+                <img class = "img-fluid main-post-img" src="{{post.contestPoster}}"> 
+            </div>
                                
                   
              
@@ -24,182 +25,154 @@ title: Competitive Programming Club
                     <strong>
                       {{ post.title }} 
                     </strong>
-                </h4>
+                    </h4>
         
                     <!-- Post date -->
                     <p class = post-date>{{ post.date | date: '%B %d, %Y' }}</p>
                   
                   <!-- Post content -->
                   <div class = "main-post-content">
-                   <!-- {% if post.contestPost == true %}-->
+                 
 
-                    <a class="btn btn-info main-post-btn" href="http://cpc.cpsc.ucalgary.ca/contests/ccpc/2020/index.html" role="button" target="_blank">
-                        Info
-                        </a>
-                    <a class="btn btn-info main-post-btn" href="http://cpc.cpsc.ucalgary.ca/contests/ccpc/2020/index.html" role="button" target="_blank">
-                        Sign Up
-                        </a>
+                        <a class="btn main-post-btn" href="http://cpc.cpsc.ucalgary.ca/contests/ccpc/2020/index.html" role="button" target="_blank">
+                            Info
+                            </a>
+                        <a class="btn main-post-btn" href="http://cpc.cpsc.ucalgary.ca/contests/ccpc/2020/index.html" role="button" target="_blank">
+                            Sign Up
+                            </a>
 
-                        <p class = main-post></p>{{ post.text }}</p></div>
-                        <br>...</br>
-                        <div class = "read-more">Read more</div>
+                            <p class = main-post></p>{{ post.text }}</p></div>
+                            <br>...</br>
+                            <div class = "read-more">Read more</div>                 
                     
-                
 
-                    <!--{% endif %}-->
                     </div>              
-                  
-                    
-                    
-               
-         
   
-                {% endfor %}
-
-           
+                    {% endfor %}        
            
             
         </div>
 
-        <div class="col-sm-6 col-xs-12 col-md-9 welcome-box"> 
+        <div class="col-xs-12 col-sm-12 col-md-11 welcome-box"> 
             <h3 class = "welcome"> Welcome </h3>
             <p class = "welcome">
-                Welcome to the University <br>of <b>Calgary Competitive Programming Club</b> website. 
-                We meet every Wednesday night from 6:00-7:30pm in MS 160 for coaching and practice. 
-                Saturday practice contests are also often held. To join the club, just join our <u>mailing list</u>.
-            </br>
+                    Welcome to the University <br>of <b>Calgary Competitive Programming Club</b> website. 
+                    We meet every Wednesday night from 6:00-7:30pm in MS 160 for coaching and practice. 
+                    Saturday practice contests are also often held. To join the club, just join our <u>mailing list</u>.
+                </br>
             </p>
-            
-            
+        
+        
             <button class = "kattis-button" title = "No contest right now, have a great summer!">                
                 <b>Current Kattis Contest</b>                                         
-            </button>
+            </button>    
 
-            
-       
-        </div>   
+
+        </div>               
+        
+    
     </div>
 
-    <div class = "row">
-        <div class="col-xs-12 col-sm-10 col-md-3 col-sm-push-1">
+    <div class = "row pt-5">  
+        
+        <div class = "card-deck deck justify-content-center">  
 
-            <!-- Social links -->
-            <div class="panel panel-primary no-radius">
-                <div class="panel-heading no-radius">
-                <h3 class="panel-title-b"> Connect with us </h3>
-                </div><!--./panel-heading -->
+            <div class="col-md-11 col-xl-3 pb-5">        
 
-                <ul class="social-links list-inline">
-
-                <li><!-- Newsletter -->
-                    <a class="text-info" href="{{ site.newsletter }}">
-                        <i class="far fa-newspaper fa-3x fa-icon"></i>
-                    </a>
-                </li>
-                <li><!-- Discord -->
-                    <a class="text-info" href="{{ site.discord }}">
-                        <i class="fab fa-discord fa-3x fa-icon"></i>
-                    </a>
-                </li>
-                <li><!-- Facebook -->
-                    <a class="text-info" href="{{ site.facebook }}">
-                    <i class="fab fa-facebook-square fa-3x fa-icon"></i>
-                    </a>
-                </li>
-
-                <br>
-                <li><!-- Twitter -->
-                    <a class="text-info" href="{{ site.twitter }}">
-                    <i class="fab fa-twitter-square fa-3x fa-icon-2"></i>
-                    </a>
-                </li>
-                <li><!-- GitHub -->
-                    <a class="text-info" href="{{ site.github }}">
-                    <i class="fab fa-github-square fa-3x fa-icon"></i>
-                    </a>
-                </li>
-                <li><!-- Email -->
-                    <a class="text-info" href="mailto:{{ site.email }}">
-                        <i class="far fa-envelope fa-3x fa-icon-2"></i>
-                    </a>
-                </li>
-                </br>
-                </ul>
-            </div><!--./panel -->
-        </div>
-
-        <div class="col-xs-12 col-sm-10 col-md-3 col-sm-push-1">
-            <div class="panel panel-primary no-radius">
-                <div class="panel-heading no-radius">
-                    <h3 class="panel-title-b"> Positions </h3>
-                </div><!--./panel-heading -->
-                
-                    <div class="panel-body fixed-panel">                      
-                        <p><b>Junior VP Academic: </b>
-                        We are currently looking for people who are interested in giving online lectures. 
-                        It's a great way solidify your knowledge on algorithm concepts. +Application</p> 
+                <div class="card h-100 text-center">
+                    <div class="card-header card-header-dec">
+                        Connect with us
                     </div>
+                    <div class="card-body card-border center-h">
+
+                        <div class="skill-icons justify-content-center">
                 
-             
+                            <a href="{{ site.newsletter }}">
+                                <i class="far fa-newspaper fa-3x fa-icon"></i>
+                            </a>      
+
+                            <a href="{{ site.github }}">
+                                <i class="fab fa-github-square fa-3x fa-icon"></i>
+                            </a>       
+                                                        
+                            <a href="{{ site.facebook }}">
+                                <i class="fab fa-facebook-square fa-3x fa-icon"></i>
+                            </a>
+                        
+                        </div>
+                        <div class="skill-icons">
+                
+                            <a class = "twitter" href="{{ site.twitter }}">
+                                <i class="fab fa-twitter-square fa-3x fa-icon"></i>
+                            </a>
+                        
+                            <a class ="discord" href="{{ site.discord }}">
+                                <i class="fab fa-discord fa-3x fa-icon"></i>
+                            </a>                     
+                        
+                            <a class = "mail" href="mailto:{{ site.email }}">
+                                <i class="fas fa-envelope-square fa-3x fa-icon"></i>
+                            </a>
+                        
+                        </div>                        
+                    
+                    </div>               
+                </div>   
+                
+            </div>
+
+            <div class="col-md-11 col-xl-3 pb-5">
+
+                <div class="card h-100 text-center">
+                    <div class="card-header card-header-dec">
+                        Open Positions
+                    </div>
+                    <div class="card-body card-border center-h">
+
+                    <p class = "text-center"><b>Junior VP Academic: </b>
+                            We are currently looking for people who are interested in giving online lectures. 
+                            It's a great way solidify your knowledge on algorithm concepts. +Application</p> 
+                    </div>
+
+                        
+                            
+                </div>   
             
-            </div><!--./panel -->
-        </div>
+            </div>
 
-        <div class="col-xs-12 col-sm-10 col-md-4 col-sm-push-1">
-            <div class="panel panel-primary no-radius">
-                <div class="panel-heading no-radius">
-                  <h3 class="panel-title-b">Sponsors</h3>
-                </div><!--./panel-heading -->
-                    <div class="panel-body fixed-panel">
-                        <ul class="sponsors list-inline">
-                        
-                            <li>
-                                <a class="text-center" href="https://www.google.com/">
-                                    <img class="img-fluid external-logo" src="/img/logo-google.png" alt="Google">
-                                </a>
-                                
-                            
-                            </li>     
-                            <li>
-                                <a class="text-center" href="https://www.kattis.com/">
-                                    <img class="img-fluid external-logo" src="/img/logo-kattis.png" alt="Kattis">
-                                </a>
+            <div class="col-md-11 col-xl-4 pb-5">
 
-                            </li>               
-                            
-                        
-                            <br>
-                                <li>
-                                    <a class="text-center" href="https://www.synopsys.com/software-integrity.html">
-                                        <img class="img-fluid external-logo-2" src="/img/logo-synopsys-3.png" alt="Synopsys">
-                                    </a>                               
-                                </li>
-
-                                <li>
-                                    <a class="text-center" a href="http://www.arcurve.com">
-                                        <img class="img-fluid external-logo-3" src="/img/logo-arcurve.png" alt="Arcurve">
-                                    </a>      
-
-                                </li>
-                            </br>
-                        
-                                    
-                            
-                        
-                        
-                        </ul>
+                <div class="card h-100 text-center">
+                    <div class="card-header card-header-dec">
+                        Sponsors
                     </div>
-        
-            </div><!--./panel -->
-        </div>
+                    <div class="card-body card-border center-h">      
+  
+                        <div class="skill-icons">
+                            <a class="text-center icon" href="https://www.google.com/">
+                                <img class="img-fluid google-logo" src="/img/logo-google.png" alt="Google">
+                            </a>
+                        
+                            <a class="text-center icon" href="https://www.kattis.com/">
+                                <img class="img-fluid external-logo" src="/img/logo-kattis.png" alt="Kattis">
+                            </a>
+                        </div>  
 
+                        <div class="skill-icons">
 
-        
-    </div>
+                            <a class="text-center" href="https://www.synopsys.com/software-integrity.html">
+                                <img class="img-fluid external-logo-2" src="/img/logo-synopsys-3.png" alt="Synopsys">
+                            </a>                        
+            
 
-
-
-
-
+                            <a class="text-center" a href="http://www.arcurve.com">
+                                <img class="img-fluid external-logo-3" src="/img/logo-arcurve.png" alt="Arcurve">
+                            </a> 
+                        </div>                                                                                    
+                    </div>               
+                </div>           
+            </div>              
+        </div> 
+    </div> <!--End row for panel section-->
 </div>
 
