@@ -1,14 +1,28 @@
 ---
 title: "Winter 2017 Leaderboard Winners"
-layout: post
+infoBtnLink: https://www.facebook.com/media/set/?set=a.1421889407850673.1073741830.821832857856334&type=1&l=e41e0e2cdd
 ---
 
-<div class="col-md-12">
+<div class="card post-dec">      
+<div class="card-body">
+<div class="container-fluid">   
+<div class="row">
+
+<div class = "col-xs-12">
+<div class = "date-dec"> {{ page.date | date: '%B %d, %Y' }}</div>
+<h3 class = "blog-title">{{ page.title }}</h3>      
+<div class = "blog-line"></div>
+
+<div class = "blog-btns">
+<a class="btn contest-btn" href="{{ page.infoBtnLink }}" role="button">Winners</a>
+</div>
+
+  <p>
   Congratulations to all of the leaderboard winners. These students have
   completed the most competitive programming problems over the course of the
   Winter 2017 semester. The first and second place winners won a lunch with the
   CTO of Arcurve Inc.
-  <br>
+  <br><br>
   <strong>Winners</strong>
   <ol>
     <li>Thomas Vu</li>
@@ -18,10 +32,10 @@ layout: post
     <li>Michael Hoang</li>
     <li>Sean Ovens</li>
   </ol>
-  <a class="btn btn-primary btn-sm" href="/leaderboard" role="button">
-    Leaderboard
-  </a>
-  <a class="btn btn-info btn-sm" href="https://www.facebook.com/media/set/?set=a.1421889407850673.1073741830.821832857856334&type=1&l=e41e0e2cdd" role="button">
-    Winners
-  </a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
 </div>

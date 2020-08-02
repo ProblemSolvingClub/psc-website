@@ -9,9 +9,15 @@ twitter: https://twitter.com/ucalgary_cpc
 github: https://github.com/ProblemSolvingClub
 discord: https://discordapp.com/invite/MEXwfze
 newsletter: https://mailman.ucalgary.ca/mailman/listinfo/psc-l
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 
 current_practice_contest: /practice/2017-03-15/
 
 # Build settings
 markdown: kramdown
+
+#Plugins
+plugins:
+  - jekyll-paginate

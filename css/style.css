@@ -2,7 +2,10 @@
 
 html, body{
   min-height:100%;
-  height: auto;
+  width:100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42857143;
@@ -56,9 +59,26 @@ html, body{
   color:black;
 }
 
+
 .table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
   border:1px solid white;
 }
+
+.table.no-cellpadding td{
+  padding: 0;
+}
+
+.cust{
+  max-width:100px;
+}
+.table tbody > tr > td.vert-align_td,
+.table tbody > tr > th.vert-align_th {
+   white-space: normal;
+
+}
+
+
+
   
 /* #single{
   color: #fff;
@@ -135,6 +155,11 @@ a.nav-link:not(.dropdown-menu):not(.dropdown) {
 
 .blog-btns{  
   font-weight: bold; 
+  padding-bottom: 20px;
+}
+
+.td{
+  word-break:break-all;
 }
 
 .post-dec{
@@ -207,6 +232,7 @@ h3.blog-title{
 
 .navbar-custom {
   background-color: #191616;
+  margin-bottom: -20px;
  
 }
 
