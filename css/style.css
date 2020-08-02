@@ -77,7 +77,9 @@ html, body{
 
 }
 
-
+.big-container{
+  margin-bottom: 50px;
+}
 
   
 /* #single{
@@ -579,9 +581,12 @@ p.main-post{
   transition: 0.3s;
 }
 
+a.read-more{
+    color:#262b33;
+}
+
 .read-more{
   margin-top:8px;
-
 }
 
 .welcome-box{
