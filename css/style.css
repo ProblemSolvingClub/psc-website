@@ -343,6 +343,16 @@ p.post-date{
   
 }
 
+.table-p{
+  overflow-x:auto;
+  max-width:100%;  
+}
+
+.img-cont{
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .col-m2{
   height: 300px;
 }
@@ -714,6 +724,19 @@ p.welcome{
   height: 100%;
   border: none;
 }
+
+@media all and (max-width: 500px) {
+  .table-p{
+    font-size:13px;
+  }
+}
+
+@media all and (max-width: 300px) {
+  .table-p{
+    font-size:12px;
+  }
+}
+
 
 @media (max-width: 979px) {
   skill-icons > img {
