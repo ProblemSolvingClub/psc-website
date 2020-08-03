@@ -725,13 +725,13 @@ p.welcome{
   border: none;
 }
 
-@media all and (max-width: 500px) {
+@media (max-width: 500px) {
   .table-p{
     font-size:13px;
   }
 }
 
-@media all and (max-width: 300px) {
+@media (max-width: 380px) {
   .table-p{
     font-size:12px;
   }
