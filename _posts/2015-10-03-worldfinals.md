@@ -25,12 +25,13 @@ There, they were given 5 hours to solve 10 programming problems in C, C++, or Ja
 For examples of programming contest questions, check out above. 
 </p>
 
-<div class="col-xs-12 text-center">		
+<div class="text-center">		
 
-<img class="img-responsive" src="/img/world-finals-team.jpg" alt="World finals team">
-<p class="text-center">
-From left to right: Karl Augsten, Wenli Looi, Darko Aleksic, Aryaz Eghbali
-</p>
+<img class="img-fluid" src="/img/world-finals-team.jpg" alt="World finals team">
+
+<p><i>
+    From left to right: Karl Augsten, Wenli Looi, Darko Aleksic, Aryaz Eghbali
+</i></p>
 </div>
 
 </div>

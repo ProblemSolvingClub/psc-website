@@ -1,11 +1,26 @@
-# Website for the Problem Solving Club
+# Website for the Competitive Programming Club 
 
-## Local development setup
-1. Install jekyll via `gem install jekyll`
-2. Run `jekyll build` to process the website into `_site`
-3. Run `jekyll serve` to host the site on [localhost:4000](http://localhost:4000)
+Built using HTML, CSS, Javascript, and Bootstrap. Statically generated and tested with Jekyll. 
+
+## Local development 
+You can test the website on both your local computer and mobile device.
+
+### Installing Jekyll
+1. Install Jekyll based on [the type of command line you are using](https://jekyllrb.com/docs/installation/)
+
+### Computer setup (computer viewing only)
+1. Run `jekyll build` to process the website into `_site`
+2. Run `jekyll serve` to host the site on [localhost:4000](http://localhost:4000)
+
+### Mobile device setup (computer and mobile device viewing)
+1. `jekyll build`
+2. `jekyll serve --host=0.0.0.0`
+3. Make sure your local machine and mobile device are connected to the same WiFi network
+3. Find the private IP address of the machine you're hosting the site on by `hostname -I`
+4. Enter web address `yourPrivateIP:4000` on your mobile device browser. Computer address will still be `localhost:4000`
 
 ### Example links
+Test these links to see whether you have successfully hosted the website on your local machine:
 - [Home](http://localhost:4000)
 - [About](http://localhost:4000/about)
 - [Contests > ACPC > 2015](http://localhost:4000/contests/acpc/2015)
@@ -37,11 +52,13 @@ Any time the website needs to be updated (whether it's a post, enhancement, bug,
 
 3. Push commits to local branch and create a pull request to master. 
 
-4. Assign another VP technology executive to review and approve your commits before merging to master. 
+4. Assign another VP technology executive (or someone who knows how this repository works) to review and approve your commits before merging to master. 
+
+5. After confirming the validity of the live site, delete the branch you were working on.
 
 ## Making a blog/main page post 
 
-The .md filet will need differ on variables and style based on the post type. 
+The .md file will differ on variables and styling based on the post type. 
 
 #### Contest announcement post
 - `title` (required): The title of the blog post
