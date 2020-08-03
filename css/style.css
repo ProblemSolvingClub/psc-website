@@ -155,6 +155,18 @@ a.nav-link:not(.dropdown-menu):not(.dropdown) {
   max-height: 100%;  
 }
 
+.colored{
+  background-color: yellow;
+}
+
+.main-img{
+  position: relative;
+  top: 51%;
+  transform: translateY(-51%);
+  max-width:100%;
+  max-height: 100%;  
+}
+
 .blog-btns{  
   font-weight: bold; 
   padding-bottom: 20px;
@@ -312,11 +324,14 @@ a:before {
 h4.post-title {  
   color: #473537;
   font-size: 20px;
+  position:relative;
+  top:20px;
 }
 
 p.post-date{
   font-size: 15px;
-  margin-top: -10px;
+  position:relative;
+  top:2px;
 }
 
 .col-h {
@@ -519,14 +534,14 @@ p.text-center{
   position: relative;
   font-weight: 600;
   color: #4A6546;
-  top:-55px;
-  left:-15px;
+  top:-30px;
+  left:-2px;
 }
 
 .main-box{
-  padding-top:20px;
+  padding:0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 15px 50px 0 rgba(0, 0, 0, 0.19);
-  height:500px;
+  min-height:500px;
   max-width:650px;
   background-color: white;
   border:3px solid #ffffff;
@@ -561,6 +576,7 @@ p.text-center{
 }
 p.main-post{
   font-size:16px; 
+  margin:0;
 }
 
 .main-post-btn{
@@ -586,7 +602,7 @@ a.read-more{
 }
 
 .read-more{
-  margin-top:8px;
+  margin-top:-5px;
 }
 
 .welcome-box{
@@ -604,7 +620,7 @@ a.read-more{
 
 .main-img-container{
   height: 450px;
-  width: 300px;
+  width: 300px; 
   margin-left:10px;
   margin-right:20px;
   margin-top:-20px;
