@@ -13,11 +13,11 @@ You can test the website on both your local computer and mobile device.
 2. Run `jekyll serve` to host the site on [localhost:4000](http://localhost:4000)
 
 ### Mobile device setup (computer and mobile device viewing)
-1. `jekyll build`
-2. `jekyll serve --host=0.0.0.0`
-3. Make sure your local machine and mobile device are connected to the same WiFi network
-3. Find the private IP address of the machine you're hosting the site on by `hostname -I`
-4. Enter web address `yourPrivateIP:4000` on your mobile device browser. Computer address will still be `localhost:4000`
+1. Make sure your local machine and mobile device are connected to the same WiFi network
+2. `jekyll build` on the computer
+3. Then, run `jekyll serve --host=0.0.0.0`
+4. Find the private IP address of the computer you're hosting the site on by running `hostname -I`
+5. Enter web address `yourPrivateIP:4000` on your mobile device browser. Computer web address will still be at `localhost:4000`
 
 ### Example links
 Test these links to see whether you have successfully hosted the website on your local machine:
@@ -71,12 +71,3 @@ The .md file will differ on variables and styling based on the post type.
 - `title` (required): The title of the blog post
 - `img1` (optional): The image associated with the post. If you require additional images, add `img2`, `img3`, etc.
 - `text` (required): The contest post text, except without the html/css styling
-
-
-
-
-
-
-
-
-
