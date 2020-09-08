@@ -621,7 +621,15 @@ a.read-more{
   border:3px solid #ffffff;
   margin-left:2%;
   margin-right:1%;
+  text-align: center;
  
+}
+
+.welcome-body{
+  height: 75%;
+  width: 100%;
+  position:relative;
+  top:25px;
 }
 
 .main-post-content{  
@@ -652,13 +660,18 @@ h3.welcome{
 }
 
 p.welcome{
-  color: #ffffff;
-  margin-top: 15%;
+  color: #ffffff; 
   font-size: 17px;
   text-align: center; 
   margin-left: 14%;
   margin-right: 14%;
 
+}
+
+a.welcome {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .kattis-button{
@@ -670,11 +683,8 @@ p.welcome{
   outline:none;
   text-align: center;
   text-decoration: none;
-  position: absolute;  
-  margin-top:0;
-  right: 0;
-  bottom: 15%;
-  left: 0;
+  position: relative;  
+  top:10px;
   margin: auto;
 }
 
