@@ -161,8 +161,6 @@ a.nav-link:not(.dropdown-menu):not(.dropdown) {
 
 .main-img{
   position: relative;
-  top: 51%;
-  transform: translateY(-51%);
   max-width:100%;
   max-height: 100%;  
 }
