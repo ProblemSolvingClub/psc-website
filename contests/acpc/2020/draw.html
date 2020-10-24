@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ACPC 2019 Random Prize Draw</title>
+<script>
+
+var officialContestants = "Alexa,Calkhoven,JAM\nJordan,Kwan,JAM\nMuskan,Sarvesh,JAM\nIden,Craven,Ruby\nSteven,Hwang,Ruby\nRon,Ittyipe,Doki Doki Litt Hacks\nPaul,Chen,Doki Doki Litt Hacks\nJared,Gillis,Doki Doki Litt Hacks\nKirsty,Chau,Bill Luu and the Funky Bunch\nHarjee,Johal,Bill Luu and the Funky Bunch\nBill,Luu,Bill Luu and the Funky Bunch\nMichelle,Nguyen,Turing the World\nAustin,Docherty,Turing the World\nAlbert,Choi,Artificially Intelligent\nJames,Peralta,Artificially Intelligent\nCole,Thiessen,Artificially Intelligent\nHaseeb,Khan,THREEDAYSLEFT\nSophia,Ngo,THREEDAYSLEFT\nChenlei(Iris),Bao,Da Minion\nZhenkun,Hu,Da Minion\nCalvin,Dang,Da Minion\nBenyamin,Bashari,Porcupine\nThomas,Vu,Porcupine\nFrankie,Chen,Team Backpack\nChris,Sun,Team Backpack\nJeffrey,Tong,Team Backpack\nMuhammad,Hassan,Nifflers\nCong,Pham,Nifflers\nJessie,Cai,Atoxic Python\nAbbas,Mahbod,Atoxic Python\nNima,Sarajpoor,Atoxic Python\nMushfik,Rahman,SIGSEGV\nAhmed,Farazi,SIGSEGV\nShauvik,Shadman,SIGSEGV\nAlexander,Liu,Codefrogs\nZachary,Lau,Codefrogs\nCharlie,Zheng,Codefrogs\nEvan,Losier,Evan and Jath\nJath,Ong,Evan and Jath\nAmirhossein,Mirtabatabaeipour,DisdyakisTriacontahedron\nLakin,Wecker,DisdyakisTriacontahedron\nMeysam,Kazemi,DisdyakisTriacontahedron\nDevin,Atkin,ulianwouldntjoin\nMatthew,Cameron,CTRL ALT DEFEAT\nlaura,timm,CTRL ALT DEFEAT\nZain,Sheikh,CTRL ALT DEFEAT\nMarkus,Pistner,So a Foo walks into a Bar\nRobert,McCurdy,So a Foo walks into a Bar\nBrian,Kehrig,PyBrains\nEric,Leclair,PyBrains\nMarela,Carlos,Team PabloPug\nNathan,Moton,Team PabloPug\nAkash,Melethil,Liberal Arts Majors\nBryce,Besler,Liberal Arts Majors\nLiam,Wrubleski,//TODO: Team Name\nEmmett,Collings,//TODO: Team Name\nNathan,Enerson,Markovian Logic\nHarry,Chen,Markovian Logic\nWill,Kerr,Markovian Logic\nAndrew,Burton,lustful nibbles\nJordan,Labell,lustful nibbles\nPatrick,Abou Gharib,lustful nibbles\nJeremy,Stuart,jeremy's angels\nJared,Pon,martintrans fan club\nHaiyang,He,martintrans fan club\nColin,Nguyen,martintrans fan club\nAditya,Bandekar,this.IQ = Integer.MAX_VALUE;\nDevin,Leamy,this.IQ = Integer.MAX_VALUE;\nRoger,Chen,this.IQ = Integer.MAX_VALUE;\nMuhammad Hassan,Tariq,TooLongDidntRead\nRifat,Haque,TooLongDidntRead\nHashir,Ahmed,TooLongDidntRead\nVanessa,Chen,The Pointers\nRyan,Ittyipe,The Pointers\nVic,Phan,The Pointers\nJames,Zhou,Winnable\nTony,Fang,Winnable\nAlexander,Price,Winnable\nDelara,Shamanian,Overwatch\nMeriam,Senouci,Overwatch\nMaria,Baclig,Maria and Anthony\nAnthony,He,Maria and Anthony\nAlex,Tran,Team JAR\nJae-Won,Ma,Team JAR\nHarshit,Sharma,We win all\nLuke,Son,We win all\nDaniel,Lee,We win all\nAmmar,Vora,ANF\nNishan,Soni,ANF\nFaiz,H,ANF\nUmut,Emre,chinese remainder theorem\nEthan,Kerr,chinese remainder theorem\nRoger,Cao,chinese remainder theorem\nLong,Tran,Penguins\nLong Viet,Ta,Penguins\nAdam,Gulamhusein,Blenkhorne\nJoey,Koay,Blenkhorne\nRachel,Wong,CABBAGE\nYunfan,Yang,CABBAGE\nGabrielle,Pili,CABBAGE\nGeorge,Abouseta,George A.\nNarinder,Singh,Narinder S.\nSarthak,Sharan,Sarthak S.\nBraydon,Willms,Braydon W.\nKell,L,Kell L.\nJayoo,Hwang,Jayoo H.\nChunyu,Li,Xiao bai zu\nwanting,Li,Xiao bai zu\nCoskun,Sahin,Coskun\nJofred,Cayabyab,The Aspiring YouTubers\nTyler,Lam,The Aspiring YouTubers\nOscar,Wong,The Aspiring YouTubers\nDante,Bencivenga,Algorithms Cleverly Produced in Calgary\nAdarsh,Melethil,Adarsh's Angels\nAbraham,Beauferris,Beauferris\nAdam,Beau,Beauferris\nFysal,Beauferris,Beauferris\nSpencer,Comin,Winning\nVincent,Chen,Roots of Unity\nBen,Vo,waveCheck();"
+var ofSplit = officialContestants.split("\n");
+var ofArr = [];
+var winners = [];
+for (var i = 0; i < ofSplit.length; i++) {
+	var contestant = ofSplit[i].split(",");
+	ofArr.push([contestant[1], contestant[0], contestant[2]]);
+}
+ofArr.sort(function(a,b){if (a[1] < b[1]) return -1; if (a[1] == b[1]) return a[0] < b[0] ? -1 : (a[0] > b[0] ? 1 : 0); return 1;});
+var drawing = false;
+var mdelete = false;
+var idx
+function writeContestants() {
+  var html_to_write = "";
+  for (var i = 0; i < ofArr.length; i++)
+    html_to_write += ofArr[i][1] + " " + ofArr[i][0] + ", ";
+  document.getElementById("remaining_contestants").innerHTML = html_to_write;
+}
+function draw() {
+  if (!drawing) {
+    if (mdelete) {
+      ofArr.splice(idx, 1);
+      document.getElementById("contestant_count").innerHTML = "List of official contestants (" + ofArr.length + ")";
+      writeContestants();
+    }
+    mdelete = false;
+    return;
+  }
+  mdelete = true;
+	idx = Math.floor(Math.random() * (ofArr.length));
+	document.getElementById("winner").innerHTML = ofArr[idx][1] + " " + ofArr[idx][0];
+	document.getElementById("team").innerHTML = ofArr[idx][2];
+}
+setInterval(draw, 10);
+</script>
+<style>
+body {
+	font: 20pt arial;
+	margin:0;
+}
+h1 {
+	font-size: 40pt;
+	margin:0;
+}
+.winnerBox {
+	font-size: 50pt;
+	border: 5px outset green;
+}
+input {
+	font-size: 20pt;
+}
+.blah {
+	background: #fff;
+	opacity: .95;
+	padding: 10px;
+}
+.ofList {
+	font-size: 15pt;
+}
+</style>
+</head>
+<body>
+<div class="blah">
+<h1>ACPC 2019 Random Prize Draw</h1>
+<input type="button" value="Start Draw" onclick="drawing = !drawing; this.value = (drawing) ? 'Stop Drawing' : 'Start Drawing'">
+And the winner is...
+<div class="winnerBox">
+<div id="winner"></div>
+<div id="team"></div>
+<div id="test"></div>
+</div>
+<p class=ofList>
+<b id="contestant_count">List of official contestants (<script>document.write(ofArr.length);</script>):</b>
+
+<a id="remaining_contestants"><script>  for (var i = 0; i < ofArr.length; i++) document.write(ofArr[i][1] + " " + ofArr[i][0] + ", ");
+</script></a>
+</p>
+</div>
+</body>
+</html>
