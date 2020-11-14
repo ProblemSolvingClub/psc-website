@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ACPC 2020 Random Prize Draw</title>
+<script>
+
+var officialContestants = "\nAmmar Vora, ANM\nNishan Soni, ANM\nMansehaj Singh, ANM\nKingsley Zhong, Bad GNUs\nIan Zhao, Bad GNUs\nRohit Nair, CoconutChutney\nVikram Narra, CoconutChutney\nHard Shah, CoconutChutney\nHenry Stoldt, Goldmeme Stonks\nGraham Doerksen, Goldmeme Stonks\nBen Dalman, Goldmeme Stonks\nAndrew Li, goto SegFault\nColeton Kotch, goto SegFault\nVedant Vyas, goto SegFault\nLeo Huang, Human Connection\nSuchir Srivastava, Human Connection\nMeet Bhatt, Human Connection\nJenna McDonnell, L and the Cool Js\nLuke Leontowich, L and the Cool Js\nJulie Wojtiw-Quo, L and the Cool Js\nTanyaradzwa Gozhora, Meta Ad Cosmic\nAdnan Nadeer, Meta Ad Cosmic\nAkrash Sharma, Meta Ad Cosmic\nBohan Li, MSG\nSabastien Yu, MSG\nCole McRitchie, MSG\nNicholas Knapton, NCB\nColin Christophe, NCB\nBrian Kramer, NCB\nMuhammad Hassan, Pengiuns\nCong Pham, Pengiuns\nAtley Ma, Renert\nLeif Clark, Renert\nBhavnoor Kaur, Technocrats\nRaquib Khan Lavani, Technocrats\nNicholas Chin, while True:\nbreak\nThanh Nguyen, while True:\nbreak\nAaron Tigley, YouWinSomeYouDimSum\nKyle Yang, YouWinSomeYouDimSum\nBen Grainger, YouWinSomeYouDimSum\nKaaden RumanCam, Kaaden RumanCam\nLeo Gao, Leo Gao\nBenjamin Lehmann, Benjamin Lehmann\nXiangyu Chen, Xiangyu Chen\nAnil Mawji, Anil Mawji\nAndrew Chen, Andrew Chen\nDricmoy Bhattacharjee, Dricmoy Bhattacharjee\nRoger Chen, Roger Chen\nIsaac Bachelder, Isaac Bachelder\nZachary Koo, Zachary Koo\nHiten Mahalwar, Hiten Mahalwar\nAryan Kalwani, Aryan Kalwani\nGurveer Singh Sohal, Gurveer Singh Sohal\nSwastik Sharma, Swastik Sharma\nRobert Joseph, Robert Joseph\nMenghan Chen, Menghan Chen\nLuke Son, Luke Son"
+var ofSplit = officialContestants.split("\n");
+var ofArr = [];
+var winners = [];
+for (var i = 1; i < ofSplit.length; i++) {
+	var contestant = ofSplit[i].split(",");
+	ofArr.push([contestant[1], contestant[0], contestant[2]]);
+}
+ofArr.sort(function(a,b){if (a[1] < b[1]) return -1; if (a[1] == b[1]) return a[0] < b[0] ? -1 : (a[0] > b[0] ? 1 : 0); return 1;});
+var drawing = false;
+var mdelete = false;
+var idx
+function writeContestants() {
+  var html_to_write = "";
+  for (var i = 0; i < ofArr.length; i++)
+    html_to_write += ofArr[i][1] + " " + ofArr[i][0] + ", ";
+  document.getElementById("remaining_contestants").innerHTML = html_to_write;
+}
+function draw() {
+  if (!drawing) {
+    if (mdelete) {
+      ofArr.splice(idx, 1);
+      document.getElementById("contestant_count").innerHTML = "List of official contestants (" + ofArr.length + ")";
+      writeContestants();
+    }
+    mdelete = false;
+    return;
+  }
+  mdelete = true;
+	idx = Math.floor(Math.random() * (ofArr.length));
+	
+	//uncomment this if you want team name to print beside name
+	// document.getElementById("winner").innerHTML = ofArr[idx][1] + " " + ofArr[idx][0];
+	document.getElementById("winner").innerHTML = ofArr[idx][1];
+	document.getElementById("team").innerHTML = ofArr[idx][0];
+}
+setInterval(draw, 10);
+</script>
+<style>
+body {
+	font: 20pt arial;
+	margin:0;
+}
+h1 {
+	font-size: 40pt;
+	margin:0;
+}
+.winnerBox {
+	font-size: 50pt;
+	border: 5px outset green;
+}
+input {
+	font-size: 20pt;
+}
+.blah {
+	background: #fff;
+	opacity: .95;
+	padding: 10px;
+}
+.ofList {
+	font-size: 15pt;
+}
+</style>
+</head>
+<body>
+<div class="blah">
+<h1>ACPC 2020 Random Prize Draw</h1>
+<input type="button" value="Start Draw" onclick="drawing = !drawing; this.value = (drawing) ? 'Stop Drawing' : 'Start Drawing'">
+And the winner is...
+<div class="winnerBox">
+<div id="winner"></div>
+<div id="team"></div>
+<div id="test"></div>
+</div>
+<p class=ofList>
+<b id="contestant_count">List of official contestants (<script>document.write(ofArr.length);</script>):</b>
+
+<a id="remaining_contestants"><script>  for (var i = 0; i < ofArr.length; i++) document.write(ofArr[i][1] + " " + ofArr[i][0] + ", ");
+</script></a>
+</p>
+</div>
+</body>
+</html>
