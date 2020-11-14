@@ -683,7 +683,7 @@ a.welcome {
   text-decoration: none;
   position: relative;  
   top:10px;
-  margin: auto;
+  margin: 2px;
 }
 
 .tooltip {
