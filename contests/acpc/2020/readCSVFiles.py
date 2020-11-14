@@ -8,6 +8,6 @@ with open('acpc_2020.csv', encoding="utf8") as csv_file:
             print(f'Column names are {", ".join(row)}')
             line_count += 1
         else:
-            print(rf'\n{row[1]}, {row[2]}, {row[4]}', end = "")
+            print(rf'\n{row[0]}, {row[2]}', end = "")
             line_count += 1
 
