@@ -7,3 +7,6 @@ _site/
 
 # JetBrains IDE settings folder
 .idea/
+
+#Jekyll cache
+.jekyll-cache
