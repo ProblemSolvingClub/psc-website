@@ -25,6 +25,25 @@ Test these links to see whether you have successfully hosted the website on your
 - [About](http://localhost:4000/about)
 - [Contests > ACPC > 2015](http://localhost:4000/contests/acpc/2015)
 
+### Using CPanel
+1. Once you have completed making all the changes to the website, merge your branch into master
+2. Go to this link to access [CPanel](cpc2.cpsc.ucalgary.ca/cpanel)
+    ```
+        username: cpc
+        password: *ask an admin*
+    ```
+3. Navigate to `File Manager` -> `public_html`
+    - This directory is where you will be uploading your `_site` contents
+    - You won't be able to upload folders in the directory so to work around this follow these steps:
+        1. zip the contents of the `_site` folder
+        2. upload the zipped file to CPanel in the `public_html` directory
+        3. Extract the zipped file in CPanel
+        4. Ensure that all files from `_site` is in the `public_html` directory
+4. Now, to update the latest changes from the repo, navigate to `Git Version Control`
+    - Click on manage then the `Pull or Deploy` tab
+5. Simply click on `Update from Remote` then `Deploy HEAD Commit` last
+6. That's it! Now just test the website if the changes worked
+
 ## Branch naming conventions
 
 #### Bugs
