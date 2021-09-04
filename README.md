@@ -25,7 +25,7 @@ Test these links to see whether you have successfully hosted the website on your
 - [About](http://localhost:4000/about)
 - [Contests > ACPC > 2015](http://localhost:4000/contests/acpc/2015)
 
-### Using CPanel
+## Using CPanel
 1. Once you have completed making all the changes to the website, merge your branch into master
 2. Go to this link to access [CPanel](cpc2.cpsc.ucalgary.ca/cpanel)
     ```
@@ -34,6 +34,7 @@ Test these links to see whether you have successfully hosted the website on your
     ```
 3. Navigate to `File Manager` -> `public_html`
     - This directory is where you will be uploading your `_site` contents
+    - First delete everything in within the `public_html` directory and then process with the steps
     - You won't be able to upload folders in the directory so to work around this follow these steps:
         1. zip the contents of the `_site` folder
         2. upload the zipped file to CPanel in the `public_html` directory
