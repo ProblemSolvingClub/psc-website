@@ -56,6 +56,9 @@ Test these links to see whether you have successfully hosted the website on your
 #### Enhancement 
 - enhancement/[short description of enhancement]
 
+#### Update
+- update/[short description of update]
+
 ## Updating the website
 Any time the website needs to be updated (whether it's a post, enhancement, bug, etc.), commits should all be pushed to a new branch and then merged to master through a pull request. Do **not** push commits directly to master.
 
