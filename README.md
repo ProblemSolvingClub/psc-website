@@ -43,7 +43,9 @@ Test these links to see whether you have successfully hosted the website on your
 4. Now, to update the latest changes from the repo, navigate to `Git Version Control`
     - Click on manage then the `Pull or Deploy` tab
 5. Simply click on `Update from Remote` then `Deploy HEAD Commit` last
-6. That's it! Now just test the website if the changes worked
+6. Then once you do that some folders from the repo will be in the `public_html` directory so then you have to delete everything from the `public_html` directory again and re-upload your `_site` contents and extract and move again
+7. Then hopefully that's it! Now just test the website with an Incognito browser and check to see if the changes worked
+8. If you don't see changes in your regular browser you just might need to clear your cookies on the site
 
 ## Branch naming conventions
 
