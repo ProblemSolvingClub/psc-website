@@ -7,8 +7,9 @@ You can test the website on both your local computer and mobile device.
 
 ### Installing Jekyll
 1. Install Jekyll based on [the type of command line you are using](https://jekyllrb.com/docs/installation/) 
-*NOTE: GCC is a huge pain in the ass to install on a windows operation system.
-use this incredibly shady link to install it much easier: (https://sourceforge.net/projects/mingw-w64/)
+ 
+    *NOTE:* GCC is a huge pain in the ass to install on a windows operation system.
+    use this incredibly shady link to install it much easier: (https://sourceforge.net/projects/mingw-w64/)
 
 ### Computer setup (computer viewing only)
 1. Run `jekyll build` to process the website into `_site`
