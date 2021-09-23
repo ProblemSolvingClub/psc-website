@@ -27,10 +27,10 @@ Test these links to see whether you have successfully hosted the website on your
 
 ## Using CPanel
 1. Once you have completed making all the changes to the website, merge your branch into master
-2. Go to this link to access [CPanel](cpc2.cpsc.ucalgary.ca/cpanel)
+2. Go to this link to access [CPanel](cpanel.cpsc.ucalgary.ca)
     ```
-        username: cpc
-        password: *ask an admin*
+        username: pscadmin
+        password: *saved to LastPass*
     ```
 3. Navigate to `File Manager` -> `public_html`
     - This directory is where you will be uploading your `_site` contents
