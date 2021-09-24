@@ -10,6 +10,9 @@ You can test the website on both your local computer and mobile device.
  
     *NOTE:* GCC is a huge pain in the ass to install on a windows operation system.
     use this incredibly shady link to install it much easier: (https://sourceforge.net/projects/mingw-w64/)
+2. Run gem install jekyll-paginate
+
+3. If using Ruby 3.0 or later, make sure to install webrick with gem install webrick
 
 ### Computer setup (computer viewing only)
 1. Run `jekyll build` to process the website into `_site`
