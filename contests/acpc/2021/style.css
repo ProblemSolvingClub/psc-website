@@ -75,6 +75,8 @@ li {
     color:rgb(32, 32, 32)
 }
 
+
+
 #header hr {
     border: 1px solid #FFF;
 }
@@ -89,7 +91,7 @@ li {
 }
 
 #arcurve-float {
-    padding: 20px;
+    padding: 30px;
 }
 
 #arcurve-float img {
