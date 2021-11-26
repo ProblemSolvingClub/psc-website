@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ACPC 2021 Random Prize Draw</title>
+<script>
+// byte\nIris Bao, youxiu\nXingdong Cao, youxiu\nSanjeev Rao, Sanjeev Rao\nTin Le, Tin Le\nJason Nguyen, Jason Nguyen\nAaron He, Aaron He\nBraydon Willms, Braydon Willms\nYifeng Pan, Yifeng Pan\nHenrique Pereira, Henrique Pereira\nMichelle Nguyen, Michelle Nguyen\nBenyamin Bashari, Benyamin Bashari\nHenry Vu, Henry Vu\nJulien Lam, Julien Lam\nDustin Ward, :person_running: :person_running: :person_running:\nJosip Smolcic, :person_running: :person_running: :person_running:\nJoshua Swidinsky, :person_running: :person_running: :person_running:\nBlake McLachlin, Blake McLachlin\nBrett Wells, Brett Wells\nCole Adams, Runtime Terror\nSunny Nagam, Runtime Terror\nNoah Ergezinge, fill it mig nun\nAkshat Pandey, Akshat Pandey\nMohammad Mohaiminul Islam Maheer, Mohammad Mohaiminul Islam Maheer
+var officialContestants = "\nRaziuddin Ahmed, 3Guns\nRezwan Ahmed, 3Guns\nAbrar Zawad Safwan, 3Guns\nKyle Hennig, Arch Users\nKonrad Staniszewski, Arch Users\nAndrew Rooney, Arch Users\nEvan Maloney, BAE\nBrandon Danyluk, BAE\nAkshat Pandey, BAE\nIan DeHaan, Brandon's Probabilistic Polynomial\nGrayden Price, Brandon's Probabilistic Polynomial\nJacob Skitsko, Brandon's Probabilistic Polynomial\nZachary Lau, Codefrogs\nTejus Gangadharaiah, Codefrogs\nAlexander Liu, Codefrogs\nCe Zheng, Codetoads\nJohn Zheng, Codetoads\nGurdeep Singh, Fire breathing Beasts\nDaniil Pleskach, Fire breathing Beasts\nJenna McDonnell, Greendale Human Beings\nLuke Leontowich, Greendale Human Beings\nCaleb Van't Land, Greendale Human Beings\nKezziah Ayuno, KAP\nAlexa Calkhoven, RAT\nRadu Schirliu, RAT\nWEIYING CHEN, remake\nIvan Zhang, remake\nJiacheng Wu, remake\nZeyu Li, Seg Fault 2 (C# Edition)\nAndrew Wood, Seg Fault 2 (C# Edition)\nIvan Penales, Seg Fault 2 (C# Edition)\nJames Laidlaw, Segfault Grindset\nPurnapushkala Hariharan, Segfault Grindset\nMd Akif Chowdhury, Segfault Grindset\nSean Park, The Comets Are Coming\nMatthew Michaud, The Comets Are Coming\nTruong-Giang Pham, truong_manny\nManny Teran, truong_manny\nJulie Wojtiw-Quo, University of Lethbridge WA\nDustin Ward, University of Lethbridge WA\nLiam King, University of Lethbridge WA\nHaohu Shen, youxiu\nXingdong Cao, youxiu\nShariq Naiyer, Shariq Naiyer\nJulien Lam, Julien Lam\nLiam King, Liam King\nTyler Yip, Tyler Yip\nSuleman Basit, Suleman Basit\nAlbert Guo, Albert Guo\nJason Nguyen, Jason Nguyen\nLuke Hollinda, Luke Hollinda\nBY Li, BY Li\n凯文 刘, 凯文 刘\nTyler Sadler, Tyler Sadler\nRyan Allard, Ryan Allard\nDaniel Park, Daniel Park\nBraydon Willms, Braydon Willms\nviet chu, viet chu\nYuzhong (WeiWei) Luo, Yuzhong (WeiWei) Luo\nEugene Lee, Eugene Lee\nBrian Zhang, Brian Zhang\nBrian Nguyen, Brian Nguyen\nJacob Schon, Jacob Schon\nJames Rettie, jamesrettiesemail@gmail.com\nBennett Wiredu, kbeezy\nYoussef Ismail, kbeezy\nkourosh kehtari, kbeezy\nAditya Goyal, Stack_Underflow\nAlex Filipescu, Stack_Underflow\nHao Chen (Kevin) Kang, Hao Chen (Kevin) Kang\nShariq Naiyer, Shariq Naiyer\nKrishna Shah, Krishna Shah\nKINGSLEY ZHONG, KINGSLEY ZHONG\nBinh Phan, Binh Phan\nChristina He, Christina He\nRocky Au, Rocky Au\nBY Li, BY Li\n凯文 刘, 凯文 刘\nRafael Galindo, Rafael Galindo\nBenjamin Lehmann, Benjamin Lehmann\nAaron Lengyel, Aaron Lengyel\nViet Chu, Viet Chu\nRaine Legary, Raine Legary\nArshia Omouri Sarabi, Bots\nMehdi Roudaki, Bots\nAri Blondal, Fuschia\nHeorhii Shramko, Fuschia\nWyatt Wismer, Mr. Worldwides\nDaniel Wolff, Mr. Worldwides\nMikhail Andrenkov, Mr. Worldwides\nJack Gong, Royalers\nShuhaib Mehri, Royalers\nBY Li, SFU Blue\nShea  Janke, SFU Blue\nDaniel Wang, SFU Blue\nDaniel Ko, UBC DK\nKevin Liu, UBC DK\nAngus Lim, UBC Retired\nVictor Chen, upick\nEmily Gong, upick\nSraavan Sridhar, wrong answer on pretest 2\nFengpeng Huang, wrong answer on pretest 2\nHenry X, я нет пиво\nDavid  Zheng, я нет пиво\nJason Chiu, я нет пиво\nShariq Naiyer, Shariq Naiyer\nEvan Jacobson, Evan Jacobson\nDavid Zheng, David Zheng\nBrandon Zhang, Brandon Zhang\nThomas Thomas, Thomas Thomas\nBrandon Zhu, Brandon Zhu\nEric Hu, E Luo\nEugene Lee, Eugene Lee\nBrian Zhang, Brian Zhang\nBrian Nguyen, Brian Nguyen\nJacob Schon, Jacob Schon\nJames Rettie, jamesrettiesemail@gmail.com\nBennett Wiredu, kbeezy\nYoussef Ismail, kbeezy\nkourosh kehtari, kbeezy\nAditya Goyal, Stack_Underflow\nAlex Filipescu, Stack_Underflow\nHao Chen (Kevin) Kang, Hao Chen (Kevin) Kang\nShariq Naiyer, Shariq Naiyer\nKrishna Shah, Krishna Shah\nKINGSLEY ZHONG, KINGSLEY ZHONG\nBinh Phan, Binh Phan\nChristina He, Christina He\nRocky Au, Rocky Au\nBY Li, BY Li\n凯文 刘, 凯文 刘\nRafael Galindo, Rafael Galindo\nBenjamin Lehmann, Benjamin Lehmann\nAaron Lengyel, Aaron Lengyel\nViet Chu, Viet Chu\nRaine Legary, Raine Legary\nArshia Omouri Sarabi, Bots\nMehdi Roudaki, Bots\nAri Blondal, Fuschia\nHeorhii Shramko, Fuschia\nWyatt Wismer, Mr. Worldwides\nDaniel Wolff, Mr. Worldwides\nMikhail Andrenkov, Mr. Worldwides\nJack Gong, Royalers\nShuhaib Mehri, Royalers\nBY Li, SFU Blue\nShea  Janke, SFU Blue\nDaniel Wang, SFU Blue\nDaniel Ko, UBC DK\nKevin Liu, UBC DK\nAngus Lim, UBC Retired\nVictor Chen, upick\nEmily Gong, upick\nSraavan Sridhar, wrong answer on pretest 2\nFengpeng Huang, wrong answer on pretest 2\nHenry X, я нет пиво\nDavid  Zheng, я нет пиво\nJason Chiu, я нет пиво\nShariq Naiyer, Shariq Naiyer\nEvan Jacobson, Evan Jacobson\nDavid Zheng, David Zheng\nBrandon Zhang, Brandon Zhang\nThomas Thomas, Thomas Thomas\nBrandon Zhu, Brandon Zhu\nEric Hu, Eric Hu\nsteven deutekom, steven deutekom\nKevin Liu, Kevin Liu\n凯文 刘, 凯文 刘\nViet Chu, Viet ChuPS C:\Users\harsh\OneDrive\Documents\GitHub\psc-website\contests\acpc\2021> python3 .\readCSVFiles.py\nRaziuddin Ahmed, 3Guns\nRezwan Ahmed, 3Guns\nAbrar Zawad Safwan, 3Guns\nKyle Hennig, Arch Users\nKonrad Staniszewski, Arch Users\nAndrew Rooney, Arch Users\nEvan Maloney, BAE\nBrandon Danyluk, BAE\nAkshat Pandey, BAE\nIan DeHaan, Brandon's Probabilistic Polynomial\nGrayden Price, Brandon's Probabilistic Polynomial\nJacob Skitsko, Brandon's Probabilistic Polynomial\nZachary Lau, Codefrogs\nTejus Gangadharaiah, Codefrogs\nAlexander Liu, Codefrogs\nCe Zheng, Codetoads\nJohn Zheng, Codetoads\nGurdeep Singh, Fire breathing Beasts\nDaniil Pleskach, Fire breathing Beasts\nJenna McDonnell, Greendale Human Beings\nLuke Leontowich, Greendale Human Beings\nCaleb Van't Land, Greendale Human Beings\nKezziah Ayuno, KAP\nAlexa Calkhoven, RAT\nRadu Schirliu, RAT\nWEIYING CHEN, remake\nIvan Zhang, remake\nJiacheng Wu, remake\nZeyu Li, Seg Fault 2 (C# Edition)\nAndrew Wood, Seg Fault 2 (C# Edition)\nIvan Penales, Seg Fault 2 (C# Edition)\nJames Laidlaw, Segfault Grindset\nPurnapushkala Hariharan, Segfault Grindset\nMd Akif Chowdhury, Segfault Grindset\nSean Park, The Comets Are Coming\nMatthew Michaud, The Comets Are Coming\nTruong-Giang Pham, truong_manny\nManny Teran, truong_manny\nJulie Wojtiw-Quo, University of Lethbridge WA\nDustin Ward, University of Lethbridge WA\nLiam King, University of Lethbridge WA\nHaohu Shen, youxiu\nXingdong Cao, youxiu\nShariq Naiyer, Shariq Naiyer\nJulien Lam, Julien Lam\nLiam King, Liam King\nTyler Yip, Tyler Yip\nSuleman Basit, Suleman Basit\nAlbert Guo, Albert Guo\nJason Nguyen, Jason Nguyen\nLuke Hollinda, Luke Hollinda\nBY Li, BY Li\n凯文 刘, 凯文 刘\nTyler Sadler, Tyler Sadler\nRyan Allard, Ryan Allard\nDaniel Park, Daniel Park\nBraydon Willms, Braydon Willms\nviet chu, viet chu\nYuzhong (WeiWei) Luo, Yuzhong (WeiWei) Luo\nEugene Lee, Eugene Lee\nBrian Zhang, Brian Zhang\nBrian Nguyen, Brian Nguyen\nJacob Schon, Jacob Schon\nJames Rettie, jamesrettiesemail@gmail.com\nBennett Wiredu, kbeezy\nYoussef Ismail, kbeezy\nkourosh kehtari, kbeezy\nAditya Goyal, Stack_Underflow\nAlex Filipescu, Stack_Underflow\nHao Chen (Kevin) Kang, Hao Chen (Kevin) Kang\nShariq Naiyer, Shariq Naiyer\nKrishna Shah, Krishna Shah\nKINGSLEY ZHONG, KINGSLEY ZHONG\nBinh Phan, Binh Phan\nChristina He, Christina He\nRocky Au, Rocky Au\nBY Li, BY Li\n凯文 刘, 凯文 刘\nRafael Galindo, Rafael Galindo\nBenjamin Lehmann, Benjamin Lehmann\nAaron Lengyel, Aaron Lengyel\nViet Chu, Viet Chu\nRaine Legary, Raine Legary\nArshia Omouri Sarabi, Bots\nMehdi Roudaki, Bots\nAri Blondal, Fuschia\nHeorhii Shramko, Fuschia\nWyatt Wismer, Mr. Worldwides\nDaniel Wolff, Mr. Worldwides\nMikhail Andrenkov, Mr. Worldwides\nJack Gong, Royalers\nShuhaib Mehri, Royalers\nBY Li, SFU Blue\nShea  Janke, SFU Blue\nDaniel Wang, SFU Blue\nDaniel Ko, UBC DK\nKevin Liu, UBC DK\nAngus Lim, UBC Retired\nVictor Chen, upick\nEmily Gong, upick\nSraavan Sridhar, wrong answer on pretest 2\nFengpeng Huang, wrong answer on pretest 2\nHenry X, я нет пиво\nDavid  Zheng, я нет пиво\nJason Chiu, я нет пиво\nShariq Naiyer, Shariq Naiyer\nEvan Jacobson, Evan Jacobson\nDavid Zheng, David Zheng\nBrandon Zhang, Brandon Zhang\nThomas Thomas, Thomas Thomas\nBrandon Zhu, Brandon Zhu\nEric Hu, Eric Hu\nsteven deutekom, steven deutekom\nKevin Liu, Kevin Liu\n凯文 刘, 凯文 刘\nViet Chu, Viet Chu"
+var ofSplit = officialContestants.split("\n");
+var ofArr = [];
+var winners = [];
+for (var i = 1; i < ofSplit.length; i++) {
+	var contestant = ofSplit[i].split(",");
+	ofArr.push([contestant[1], contestant[0], contestant[2]]);
+}
+ofArr.sort(function(a,b){if (a[1] < b[1]) return -1; if (a[1] == b[1]) return a[0] < b[0] ? -1 : (a[0] > b[0] ? 1 : 0); return 1;});
+var drawing = false;
+var mdelete = false;
+var idx
+function writeContestants() {
+  var html_to_write = "";
+  for (var i = 0; i < ofArr.length; i++)
+    html_to_write += ofArr[i][1] + " " + ofArr[i][0] + ", ";
+  document.getElementById("remaining_contestants").innerHTML = html_to_write;
+}
+function draw() {
+  if (!drawing) {
+    if (mdelete) {
+      ofArr.splice(idx, 1);
+      document.getElementById("contestant_count").innerHTML = "List of official contestants (" + ofArr.length + ")";
+      writeContestants();
+    }
+    mdelete = false;
+    return;
+  }
+  mdelete = true;
+	idx = Math.floor(Math.random() * (ofArr.length));
+	
+	//uncomment this if you want team name to print beside name
+	// document.getElementById("winner").innerHTML = ofArr[idx][1] + " " + ofArr[idx][0];
+	document.getElementById("winner").innerHTML = ofArr[idx][1];
+	document.getElementById("team").innerHTML = ofArr[idx][0];
+}
+setInterval(draw, 10);
+</script>
+<style>
+body {
+	font: 20pt arial;
+	margin:0;
+}
+h1 {
+	font-size: 40pt;
+	margin:0;
+}
+.winnerBox {
+	font-size: 50pt;
+	border: 5px outset green;
+}
+input {
+	font-size: 20pt;
+}
+.blah {
+	background: #fff;
+	opacity: .95;
+	padding: 10px;
+}
+.ofList {
+	font-size: 15pt;
+}
+</style>
+</head>
+<body>
+<div class="blah">
+<h1>ACPC 2021 Random Prize Draw</h1>
+<input type="button" value="Start Draw" onclick="drawing = !drawing; this.value = (drawing) ? 'Stop Drawing' : 'Start Drawing'">
+And the winner is...
+<div class="winnerBox">
+<div id="winner"></div>
+<div id="team"></div>
+<div id="test"></div>
+</div>
+<p class=ofList>
+<b id="contestant_count">List of official contestants (<script>document.write(ofArr.length);</script>):</b>
+
+<a id="remaining_contestants"><script>  for (var i = 0; i < ofArr.length; i++) document.write(ofArr[i][1] + " " + ofArr[i][0] + ", ");
+</script></a>
+</p>
+</div>
+</body>
+</html>
