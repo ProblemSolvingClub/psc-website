@@ -3,7 +3,7 @@ title: "Resume Workshop"
 contestPoster: /img/resume-2022.png
 infoBtnLink: 
 signupBtnLink: https://ucalgary.zoom.us/j/95857409278?pwd=d2ZkemFlUlRURERxTzZkaFYwMkV6UT09
-text: Happy reading week! The competitive programming club is hosting a resume workshop featuring a senior software engineer at Synopsis, Matthew Dumont, next Friday from 5-7 pm. This means there is no lecture this week. If you are still itching to solve problems the resume workshop will host 2 bug hunts where the winner can earn a chance to get their resume reviewed by Matthew and the director of software engineering at Synopsis, Tyler Sims, who will also be joining us for Q&A and networking.
+text: Happy reading week! The competitive programming club is hosting a resume workshop featuring a senior software engineer at Synopsis, Matthew Dumont, today from 5-7 pm. This means there is no lecture this week. If you are still itching to solve problems the resume workshop will host 2 bug hunts where the winner can earn a chance to get their resume reviewed by Matthew and the director of software engineering at Synopsis, Tyler Sims, who will also be joining us for Q&A and networking.
 ---
 
 <div class="card post-dec">      
@@ -29,7 +29,7 @@ text: Happy reading week! The competitive programming club is hosting a resume w
 
 <p>Happy reading break! We are hoping you are as excited for in person classes as we are!</p>
 <p>
-As the week winds down why not take the time to join Matt Dumont as he leads a resume workshop hosted by Synopsis next Friday from 5-7 pm. He will be joined by Tyler Sims, the Director of Software Engineering as Synopsis for a Q&A and networking opportunity. <b>This means no lecture this week</b>.
+As the week winds down why not take the time to join Matt Dumont as he leads a resume workshop hosted by Synopsis next today from 5-7 pm. He will be joined by Tyler Sims, the Director of Software Engineering at Synopsis for a Q&A and networking opportunity. <b>This means no lecture this week</b>.
 </p>
 
 <p>
