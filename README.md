@@ -4,6 +4,9 @@ Built using HTML, CSS, Javascript, and Bootstrap. Statically generated and teste
 
 ## How it all works
 
+* Already know? Skip to the [TODO LIST](#todo-list)!
+* Need a reminder on how to update the site? [click here](#making-changes)
+
 [Jekyll](https://jekyllrb.com) is a static site generator.
 The majority of this repo's structure is relevant to how jekyll works.
 
@@ -45,6 +48,7 @@ To make changes here are some tips:
 ### Blog Posts
 
 1. To make a new blog post go to [`_posts`](_posts/). You can copy paste the previous post.
+    - The name should be `<year>-<month>-<day>-<Name>.md`. It will not work otherwise.
     - The yaml front matter (stuff at the top inside those `---`) will be displayed inside of the home page. This metadata includes:
         - `title` (required)
             - The title of the blog post
@@ -99,28 +103,7 @@ Test these links to see whether you have successfully hosted the website on your
 - [About](http://localhost:4000/about)
 - [Contests > ACPC > 2015](http://localhost:4000/contests/acpc/2015)
 
-
-## Using CPanel
-1. Once you have completed making all the changes to the website, merge your branch into master
-2. Go to this link to access [CPanel](cpc2.cpsc.ucalgary.ca/cpanel)
-    ```
-        username: cpc
-        password: *saved to LastPass*
-    ```
-3. Navigate to `File Manager` -> `public_html`
-    - This directory is where you will be uploading your `_site` contents
-    - First delete everything in within the `public_html` directory and then process with the steps
-    - You won't be able to upload folders in the directory so to work around this follow these steps:
-        1. zip the contents of the `_site` folder
-        2. upload the zipped file to CPanel in the `public_html` directory
-        3. Extract the zipped file in CPanel
-        4. Ensure that all files from `_site` is in the `public_html` directory
-4. Now, to update the latest changes from the repo, navigate to `Git Version Control`
-    - Click on manage then the `Pull or Deploy` tab
-5. Simply click on `Update from Remote` then `Deploy HEAD Commit` last
-6. Then once you do that some folders from the repo will be in the `public_html` directory so then you have to delete everything from the `public_html` directory again and re-upload your `_site` contents and extract and move again
-7. Then hopefully that's it! Now just test the website with an Incognito browser and check to see if the changes worked
-8. If you don't see changes in your regular browser you just might need to clear your cookies on the site
+[Back to top](#website-for-the-competitive-programming-club)
 
 # Possibly Outdated but Useful
 
@@ -181,3 +164,4 @@ The .md file will differ on variables and styling based on the post type.
 - [ ] CCPC problem setting
 - [ ] Prepare for ACPC
 
+[Back to top](#website-for-the-competitive-programming-club)
