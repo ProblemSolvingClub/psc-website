@@ -159,9 +159,13 @@ The .md file will differ on variables and styling based on the post type.
 
 # TODO LIST:
 
-- [x] CCPC contest post
+- [ ] Get RSA keys for server
+- [x] CCPC 2022 contest post
+- [x] Advertisement for Resume Event
+- [x] Update [roster](about/)
 - [ ] Fix leaderboard
-- [ ] CCPC problem setting
-- [ ] Prepare for ACPC
+- [ ] Redirect [https://cpc.cpsc.ucalgary.ca/ccpc](https://cpc.cpsc.ucalgary.ca/ccpc) to the ccpc 2022 page
+- [ ] Move away from CPanel (our server??)
+- [ ] Update prize draw
 
 [Back to top](#website-for-the-competitive-programming-club)
