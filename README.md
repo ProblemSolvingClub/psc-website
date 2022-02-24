@@ -78,7 +78,7 @@ To make changes here are some tips:
 
 ## Using CPanel
 1. Once you have completed making all the changes to the website, merge your branch into master
-2. Go to this link to access [CPanel](cpc2.cpsc.ucalgary.ca/cpanel)
+2. Go to this link to access [CPanel](https://cpc2.cpsc.ucalgary.ca/cpanel)
     ```
         username: cpc
         password: *saved to LastPass*
@@ -164,7 +164,7 @@ The .md file will differ on variables and styling based on the post type.
 - [x] Advertisement for Resume Event
 - [x] Update [roster](about/)
 - [ ] Fix leaderboard
-- [ ] Redirect [https://cpc.cpsc.ucalgary.ca/ccpc](https://cpc.cpsc.ucalgary.ca/ccpc) to the ccpc 2022 page
+- [x] Redirect [https://cpc.cpsc.ucalgary.ca/ccpc](https://cpc.cpsc.ucalgary.ca/ccpc) to the ccpc 2022 page
 - [ ] Move away from CPanel (our server??)
 - [ ] Update prize draw
 
