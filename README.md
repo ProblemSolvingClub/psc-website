@@ -159,7 +159,7 @@ The .md file will differ on variables and styling based on the post type.
 
 # TODO LIST:
 
-- [ ] Get RSA keys for server
+- [x] Get RSA keys for server
 - [x] CCPC 2022 contest post
 - [x] Advertisement for Resume Event
 - [x] Update [roster](about/)
