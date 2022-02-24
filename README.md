@@ -78,7 +78,7 @@ To make changes here are some tips:
 
 ## Using CPanel
 1. Once you have completed making all the changes to the website, merge your branch into master
-2. Go to this link to access [CPanel](cpc2.cpsc.ucalgary.ca/cpanel)
+2. Go to this link to access [CPanel](https://cpc2.cpsc.ucalgary.ca/cpanel)
     ```
         username: cpc
         password: *saved to LastPass*
