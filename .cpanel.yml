@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/cpc/public_html/
-    - /bin/cp -R _site/* $DEPLOYPATH
+    - /bin/cp -R _site/ $DEPLOYPATH
