@@ -27,7 +27,7 @@ text: Come join us in MS160 and MS457 for an introduction to Dynamic Programming
 </div>
 
 <p>
-Come join us in MS160 and MS457 for an introduction to Dynamic Programming.
+We will be having our weekly workshop today in room MS 160 at 6pm. We will be reviewing the "Roman Holidays" and "Canonical Coin Systems" problems from last week, and introducing dynamic programming, the technique that often makes the difference between getting a top placement in a contest or not. ACPC is approaching fast so be sure to come and practice for the big event! Hope to see you all there!🥳
 </p>
 
 </div>
