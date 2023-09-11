@@ -28,8 +28,8 @@ text: Join us next Wednesday, the 13th in ICT 122 for our first meet and greet. 
 
 <p>Join us next Wednesday, the 13th in ICT 122 for our first meet and greet. In this event, you will meet the Competitive Programming Team. This is an opportunity for you to network and learn more about our upcoming workshops. We will encourage you to form teams, have fun, learn, collaborate and grow as you work on your problem-solving abilities while taking on programming questions!  Please fill out our RSVP forms and get signed up so we can add you to our list. </p>
 
-<p>Location: <b>ICT 122 at University of Calgary (2500 University Dr. NW, Calgary)</b>
-Date: <b>September 13, 2023</b>
+<p>Location: <b>ICT 122 at University of Calgary (2500 University Dr. NW, Calgary)</b> <br>
+Date: <b>September 13, 2023</b><br>
 Time: <b>5:00 PM - 7:00 PM</b>
 </p>
 
