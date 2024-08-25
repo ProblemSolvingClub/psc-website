@@ -93,7 +93,7 @@ To make changes here are some tips:
         1. zip the contents of the `_site` folder
         2. upload the zipped file to CPanel in the `public_html` directory
         3. Extract the zipped file in CPanel
-        4. Ensure that all files from `_site` is in the `public_html` directory (this may require some copy pasting)
+        4. Ensure that all files from `_site` are in the `public_html` directory (this may require some copy pasting)
 6. Then hopefully that's it! Now just test the website with an Incognito browser and check to see if the changes worked
 7. If you don't see changes in your regular browser you just might need to clear your cookies on the site
 
