@@ -824,3 +824,51 @@ a.welcome {
     padding-bottom: 50px;
   }
 }
+
+/* About page css */
+.dropdown-section {
+  padding-bottom: 30px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.dropdown-button {
+  cursor: pointer;
+  background-color: #f8f9fa;
+  border: 2px solid black; /* Black border */
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.chevron {
+  border: solid black; /* Black chevron */
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(45deg); /* Chevron points right */
+  transition: transform 0.3s ease;
+}
+
+.dropdown-content-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.dropdown-content {
+  width: 100%;
+  border-top: none;
+}
+
+.dropdown-section.active .dropdown-content-wrapper {
+  max-height: 1000px; /* Set a value large enough to fit the content */
+}
+
+.dropdown-section.active .chevron {
+  transform: rotate(135deg); /* Chevron points down */
+}
