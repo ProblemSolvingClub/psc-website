@@ -855,6 +855,7 @@ a.welcome {
 }
 
 .dropdown-content-wrapper {
+  padding-top: 10px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
