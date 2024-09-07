@@ -8,7 +8,7 @@ ini_set('display_errors', 1);
 $host = 'localhost';
 $dbname = 'cpc_leaderboard';
 $user = 'cpc_cpc';
-$password = 'TYEsZofXdR=Q';
+$password = 'yWXvO{$ZSG,?';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
