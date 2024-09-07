@@ -18,11 +18,11 @@
 
         leaderboardService.get()
             .then(function(response) {
+                console.log('Response:', response);
                 vm.users = response.users;
                 vm.sites = response.sites;
                 vm.tiers = response.tiers;
             });
-
 
         function getUserDisplayName(user) {
             var displayName = user.firstName;
