@@ -1,6 +1,9 @@
 <?php
 header('Content-Type: application/json');
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Connect to the database (update the credentials accordingly)
 $host = 'localhost';
 $dbname = 'cpc_leaderboard';
