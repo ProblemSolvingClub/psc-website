@@ -19,7 +19,12 @@
         leaderboardService.get()
             .then(function(response) {
                 console.log('Response:', response);
-                vm.users = response.users;
+                vm.users = response.users.map(user => ({
+                    ...user,
+                    totalSolved: parseFloat(user.totalSolved),
+                    attendedMeetings: parseInt(user.attendedMeetings, 10),
+                    bonusProblems: parseInt(user.bonusProblems, 10)
+                }));
                 vm.sites = response.sites;
                 vm.tiers = response.tiers;
             });
