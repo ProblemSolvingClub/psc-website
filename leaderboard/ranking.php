@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 // Connect to the database (update the credentials accordingly)
 $host = 'localhost';
 $dbname = 'cpc_leaderboard';
-$user = 'cpc';
+$user = 'cpc_cpc';
 $password = 'TYEsZofXdR=Q';
 
 try {
