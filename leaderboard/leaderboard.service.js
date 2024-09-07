@@ -8,7 +8,7 @@
     leaderboardService.$inject = ['$http'];
 
     function leaderboardService($http) {
-        var apiUrl = '/ranking.php';
+        var apiUrl = '/leaderboard/ranking.php';
 
         return {
             get: get
