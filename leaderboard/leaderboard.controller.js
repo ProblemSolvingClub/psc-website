@@ -33,7 +33,9 @@
         }
 
         function getDisplayScore(score) {
-            return score > 0 ? score.toFixed(2) : 0;
+            // Convert score to a number
+            var numericScore = parseFloat(score);
+            return !isNaN(numericScore) && numericScore > 0 ? numericScore.toFixed(2) : '0';
         }
 
         function getTier(totalSolved) {
