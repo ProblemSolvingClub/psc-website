@@ -58,7 +58,6 @@ title: Leaderboard
         <th ng-bind="vm.getDisplayScore(user.totalSolved)"></th>
         <th ng-bind="user.attendedMeetings"></th>
         <th ng-bind="user.bonusProblems"></th>
-        <th ng-repeat="site in vm.sites" ng-bind="vm.getDisplayScore(user.siteSolved[site.id])"></th>
       </tr>
     </tbody>
   </table>
