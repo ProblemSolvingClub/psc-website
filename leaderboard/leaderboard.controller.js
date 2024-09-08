@@ -44,6 +44,7 @@
         function getTier(totalSolved) {
             console.log("Tiers Length: " + vm.tiers.length);
             for (var i = vm.tiers.length - 1; i >= 0; i--) {
+                console.log("I-Value: " + i);
                 if (getDisplayScore(totalSolved) >= vm.tiers[i].minimumScore) {
                     console.log("Score: " + getDisplayScore(totalSolved));
                     console.log("Tier: " + vm.tiers[i].name + " Min Score: " + vm.tiers[i].minimumScore);
