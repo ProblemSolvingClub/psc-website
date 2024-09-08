@@ -51,6 +51,7 @@ title: Leaderboard
     </thead>
     <tbody>
       <tr ng-repeat="user in vm.users | orderBy:'-totalSolved'">
+        <!-- Conditional display of trophy images for top 3 placements -->
         <th>
           <span ng-if="$index === 0">
             <img src="/img/trophies/gold-cup.png" alt="Gold Trophy" width="25" height="25"/>
@@ -61,10 +62,11 @@ title: Leaderboard
           <span ng-if="$index === 2">
             <img src="/img/trophies/bronze-cup.png" alt="Bronze Trophy" width="25" height="25"/>
           </span>
-          <span ng-if="$index > 2" ng-bind="$index + 1"></span>
+          <span ng-if="$index > 2" ng-bind="$index + 1">
+          </span>
         </th>
         <th ng-bind="vm.getUserDisplayName(user)"></th>
-        <th ng-bind="user.tier.name"></th> <!-- No function call -->
+        <th ng-bind="vm.getTier(user.totalSolved).name"></th>
         <th ng-bind="vm.getDisplayScore(user.totalSolved)"></th>
         <th ng-bind="user.attendedMeetings"></th>
         <th ng-bind="user.bonusProblems"></th>

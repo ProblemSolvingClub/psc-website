@@ -11,18 +11,19 @@
         var vm = this;
         vm.getUserDisplayName = getUserDisplayName;
         vm.getDisplayScore = getDisplayScore;
+        vm.getTier = getTier;
         vm.users = [];
         vm.sites = [];
         vm.tiers = [];
 
         leaderboardService.get()
             .then(function(response) {
+                console.log('Response:', response);
                 vm.users = response.users.map(user => ({
                     ...user,
                     totalSolved: parseFloat(user.totalSolved),
                     attendedMeetings: parseInt(user.attendedMeetings, 10),
-                    bonusProblems: parseInt(user.bonusProblems, 10),
-                    tier: getTier(parseFloat(user.totalSolved)) // Pre-calculate the tier
+                    bonusProblems: parseInt(user.bonusProblems, 10)
                 }));
                 vm.sites = response.sites;
                 vm.tiers = response.tiers;
@@ -41,12 +42,15 @@
         }
 
         function getTier(totalSolved) {
+            console.log("Tiers Length: " + vm.tiers.length);
             for (var i = vm.tiers.length - 1; i >= 0; i--) {
-                if (totalSolved >= parseFloat(vm.tiers[i].minimumScore)) {
-                    return vm.tiers[i]; // Return the tier object
+                console.log("I-Value: " + i);
+                if (getDisplayScore(totalSolved) >= parseFloat(vm.tiers[i].minimumScore)) {
+                    console.log("Score: " + getDisplayScore(totalSolved));
+                    console.log("Tier: " + vm.tiers[i].name + " Min Score: " + vm.tiers[i].minimumScore);
+                    return vm.tiers[i];
                 }
             }
-            return { name: 'Unknown', minimumScore: 0 }; // Fallback in case of error
         }
     }
 })();
