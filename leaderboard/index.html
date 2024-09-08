@@ -62,8 +62,7 @@ title: Leaderboard
           <span ng-if="$index === 2">
             <img src="/img/trophies/bronze-cup.png" alt="Bronze Trophy" width="25" height="25"/>
           </span>
-          <span ng-if="$index > 2">
-            {{$index + 1}}
+          <span ng-if="$index > 2" ng-bind="$index + 1">
           </span>
         </th>
         <th ng-bind="vm.getUserDisplayName(user)"></th>
