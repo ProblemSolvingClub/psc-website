@@ -23,7 +23,7 @@ try {
     $sites = $sitesQuery->fetchAll(PDO::FETCH_ASSOC);
 
     // Fetch tiers
-    $tiersQuery = $pdo->query("SELECT name, minimumScore FROM tiers ORDER BY minimumScore DESC");
+    $tiersQuery = $pdo->query("SELECT name, minimumScore FROM tiers ORDER BY minimumScore ASC");
     $tiers = $tiersQuery->fetchAll(PDO::FETCH_ASSOC);
 
     // Prepare the response
