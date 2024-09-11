@@ -62,14 +62,23 @@ title: Leaderboard
           <span ng-if="$index === 2">
             <img src="/img/trophies/bronze-cup.png" alt="Bronze Trophy" width="25" height="25"/>
           </span>
-          <span ng-if="$index > 2" ng-bind="$index + 1">
-          </span>
+          <span ng-if="$index > 2" ng-bind="$index + 1"></span>
         </th>
-        <th ng-bind="vm.getUserDisplayName(user)"></th>
-        <th ng-bind="vm.getTier(user.totalSolved).name"></th>
-        <th ng-bind="vm.getDisplayScore(user.totalSolved)"></th>
-        <th ng-bind="user.attendedMeetings"></th>
-        <th ng-bind="user.bonusProblems"></th>
+        <td ng-bind="vm.getUserDisplayName(user)"></td>
+        <td ng-bind="vm.getTier(user.totalSolved).name"></td>
+        <td ng-bind="vm.getDisplayScore(user.totalSolved)"></td>
+        <td ng-bind="user.attendedMeetings"></td>
+        <td ng-bind="user.bonusProblems"></td>
+      </tr>
+  
+      <!-- Add empty rows until the table is filled -->
+      <tr ng-repeat="n in [].constructor(vm.getEmptyRows()) track by $index">
+        <th>&nbsp;</th>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
     </tbody>
   </table>

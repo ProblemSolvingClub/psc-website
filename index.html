@@ -2,70 +2,26 @@
 layout: default
 title: Competitive Programming Club
 ---
-
-<div class="container-fluid">
-    <!-- Container for gradient -->
-    <div class = "row center-h gradient-m">
-        
-        <div class="col-xs-12 col-sm-11 col-md-11 mr-1 main-box"> 
-            
-            <div class = "recent-posts-title">LATEST POST</div>
-
-            {% for post in site.posts limit:1 %}
-            <div class="container-fluid">   
-                <div class="row">
-                    <div class = "col-md-6">    
-                        <img class="main-img mx-auto mr-0 pb-4" src="{{ post.contestPoster }}" alt="">   
-                    </div>             
-                
-                    <div class = "col-md-6">
-                        <h4 class="post-title"><strong>{{ post.title }}</strong></h4>
-                        <!-- Post date -->
-                        <p class = post-date>{{ post.date | date: '%B %d, %Y' }}</p>
-
-                        <div class = "blog-btns">
-                         <a class="btn main-post-btn" href="{{ post.infoBtnLink}}" role="button">
-                            Info
-                            </a>
-                        <a class="btn main-post-btn" href="{{post.signupBtnLink}}" role="button" >
-                            Sign Up
-                            </a>
-                        </div>
-
-                        <p class = main-post></p>{{ post.text | truncate: 500 }}</p>
-
-                        <div class = "read-more">
-                                <b><a class="read-more" href="/blog/index.html">Read more</a></b>  
-                        </div>    
-                        <br>
-                    </div>                
-                    
-              
-    
-                            
-                    
-                </div>
-            </div>   
-            {% endfor %}            
-            
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-11 welcome-box"> 
-            <h3 class = "welcome"> Welcome </h3>
-
-            <div class = "welcome-body">
-                <p class = "welcome">
-                        Welcome to the University <br>of Calgary <b>Competitive Programming Club</b> website. 
-                        We meet every Tuesday afternoon from 5-7pm in MS325 for coaching, practicing and mingling. 
-                        Gain access to free weekly algorithmic topic sessions, get problem solving help, and meet new people!
-                    </br>
-                </p>
-            </div>
-        </div>               
-        
-    
+<div class = "banner-container">
+    <img src="img/uofc.jpeg" alt="Image">
+    <div class="banner-text">
+        <div class="banner-title">Competitive Programming Club</div>
+        <div class="banner-description">Welcome to the University of Calgary <b>Competitive Programming Club</b> website. 
+            We meet every Tuesday afternoon from 5-7pm in MS325 for coaching, practicing and mingling. 
+            Gain access to free weekly algorithmic topic sessions, get problem solving help, and meet new people!</div>
     </div>
-
+</div>
+<div class = "row">
+    <div class="recent-posts-title">Latest Posts<img src="img/newspaper-folded.png" alt="Description" class="inline-img"> </div>
+    <div class="container-fluid">
+        {% for post in site.posts limit:1 %}
+        <div class="container blog-c"> 
+            {{ post.content }}     
+        </div>
+        {% endfor %}     
+    </div>
+</div>
+    <hr>
     <div class = "row pt-5">  
         
         <div class = "card-deck deck justify-content-center">  
@@ -133,7 +89,7 @@ title: Competitive Programming Club
                         </p> 
 
                         <!-- Form for applications -->
-                        <a class="btn btn-info btn-md" href="https://forms.gle/7Lz3i5E4egUFA8br5" role="button" target="_blank">
+                        <a class="btn btn-info btn-md custom-btn" href="https://forms.gle/7Lz3i5E4egUFA8br5" role="button" target="_blank">
                             Apply here!
                         </a>
                     </div>       
