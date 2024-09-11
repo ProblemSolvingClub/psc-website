@@ -13,13 +13,63 @@ html, body{
   background-color: #ffffff;
 }
 
+.banner-container {
+  position: relative;
+  width: 100vw;  /* Full width of the viewport */
+  height: 750px;
+  margin-top: 20px;
+}
+
+.banner-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  filter: brightness(0.7); /* Makes the image darker, 1 is default, lower values darken it */
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a shadow to ensure visibility on any background */
+  background-color: rgba(7, 6, 6, 0.63); /* Semi-transparent background: black with 50% opacity */
+  padding: 20px; /* Padding inside the container to give some space around the text */
+  border-radius: 10px; /* Optional: rounds the corners of the background */
+}
+
+.banner-title {
+  font-size: 3em; /* Larger text for company name */
+  font-weight: bold;
+}
+
+.banner-description {
+  font-size: 1.5em; /* Smaller text for mission statement */
+  margin-top: 20px; /* Adds some spacing between the company name and mission statement */
+}
+
 .gradient-m{
   padding-top: 150px;
   padding-bottom: 140px;
   background: rgb(183,220,161);
-  background: linear-gradient(160deg, rgba(183,220,161,1) 23%, rgba(71,188,156,1) 80%);
+  background: linear-gradient(160deg, rgb(255, 130, 130) 0%, rgb(172, 0, 0) 50%, rgb(255, 40, 40) 100%);
 }
 
+.flex-container {
+  display: flex;
+  gap: 20px; /* Optional: Adds space between the divs */
+  background-color: #fafafa;
+}
+
+
+.inline-img {
+  vertical-align: top; /* Align image vertically with text */
+  margin-left: 20px;
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+}
 
 .verticalLine {
   border-left: solid #cccccc;
@@ -168,6 +218,11 @@ a.nav-link:not(.dropdown-menu):not(.dropdown) {
 .blog-btns{  
   font-weight: bold; 
   padding-bottom: 20px;
+}
+
+.custom-btn {
+  background-color: #e70000;
+  border-color: #e70000;
 }
 
 .td{
@@ -321,7 +376,8 @@ a:before {
 
 h4.post-title {  
   color: #473537;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
   position:relative;
   top:20px;
 }
@@ -412,7 +468,7 @@ p.post-date{
 }
 
 .card-header-dec{
-  background-color: #57acbd;
+  background-color: #C31F1F;
   color: white;
   font-weight: bold;
   border: none;
@@ -533,17 +589,20 @@ p.text-center{
   margin-top:80px;
 }
 
+.container-h {
+  height: 800px;  
+}
+
 .container-fluid{  
   flex-grow: 2;
+  margin-bottom: 25px;
 }
 
 .recent-posts-title{
-  font-size: 16px;
-  position: relative;
+  margin: 50px auto 5px;
+  font-size: 2rem;
   font-weight: 600;
-  color: #4A6546;
-  top:-30px;
-  left:-2px;
+  color: #000000;
 }
 
 .main-box{
@@ -600,7 +659,7 @@ p.main-post{
 }
 
 .main-post-btn:hover{
-  background-color: #473537;
+  background-color: rgb(71, 53, 55);
   color: white;
   transition: 0.3s;
 }
@@ -614,8 +673,13 @@ a.read-more{
 }
 
 .welcome-box{
+  position: absolute;
   height:500px; 
   max-width: 320px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(7, 6, 6, 0.63);
   border:3px solid #ffffff;
   margin-left:2%;
   margin-right:1%;
