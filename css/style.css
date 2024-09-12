@@ -899,6 +899,7 @@ a.welcome {
   padding-bottom: 30px;
   width: 100%;
   overflow: hidden;
+  
 }
 
 .dropdown-button {
@@ -997,4 +998,22 @@ a.welcome {
 .trophy {
   width: 10px;
   height: 10px;
+}
+
+.table-image {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* past winners CSS */
+.past-winners-table {
+  padding-bottom: 10px;
+}
+
+.past-winners-acpc-button {
+  border-color: #1f45c3;
+}
+
+.past-winners-ccpc-button {
+  border-color: #C31F1F;
 }
