@@ -132,3 +132,47 @@ title: Competitive Programming Club
     </div> <!--End rowa for panel section-->
 </div>
 
+<script>
+    // Array of images to rotate through
+    const images = [
+        'img/banner_photos/uofc.jpeg',
+        'img/banner_photos/CCPC-Photos-04.png',
+        'img/banner_photos/CCPC-Photos-09.png',
+        'img/banner_photos/CCPC-Photos-13.png',
+        'img/banner_photos/CCPC-Photos-14.png',
+        'img/banner_photos/CCPC-Photos-23.png'
+    ];
+
+    let currentImageIndex = 0;
+    let nextImageIndex = 1;
+    const bannerImage1 = document.getElementById('bannerImage1');
+    const bannerImage2 = document.getElementById('bannerImage2');
+    let currentBannerImage = bannerImage1;
+    let nextBannerImage = bannerImage2;
+
+    // Function to rotate between images with crossfade
+    function rotateImage() {
+        // Swap active class to crossfade
+        currentBannerImage.classList.remove('active');
+        nextBannerImage.classList.add('active');
+
+        // Wait for the transition to finish (1 second) before swapping the image source
+        setTimeout(() => {
+            currentBannerImage.src = images[nextImageIndex];  // Change the current image to next
+            currentBannerImage.classList.remove('active');     // Ensure the correct one is active
+
+            // Swap references between current and next banner images
+            [currentBannerImage, nextBannerImage] = [nextBannerImage, currentBannerImage];
+
+            // Update indices for the next cycle
+            currentImageIndex = nextImageIndex;
+            nextImageIndex = (nextImageIndex + 1) % images.length;
+        }, 1000); // Match this delay to the CSS transition time (1 second)
+    }
+
+    // Rotate the image every 10 seconds (10000 milliseconds)
+    if (nextImageIndex == 1) {
+        nextImageIndex++;
+        setInterval(rotateImage, 10000);
+    }
+</script>
