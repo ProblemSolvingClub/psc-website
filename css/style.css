@@ -20,11 +20,21 @@ html, body{
   margin-top: 20px;
 }
 
-.banner-container img {
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures the image covers the container without distortion */
   filter: brightness(0.7); /* Makes the image darker, 1 is default, lower values darken it */
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Transition effect */
+}
+
+/* Ensure that the active image is visible */
+.banner-image.active {
+  opacity: 1;
 }
 
 .banner-text {
