@@ -785,22 +785,9 @@ a.welcome {
 /* Responsive iFrame */
 .responsive-iframe-container {
   position: relative;
-  padding-bottom: 100%;
   padding-top: 30px;
-  height: 0;
-  overflow: hidden;
 }
 
-.responsive-iframe-container iframe,   
-.vresponsive-iframe-container object,  
-.vresponsive-iframe-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
 
 @media (max-width: 500px) {
   .table-p{
@@ -1016,4 +1003,101 @@ a.welcome {
 
 .past-winners-ccpc-button {
   border-color: #C31F1F;
+}
+
+/* Mentor page CSS */
+.profile-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+.profile-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 48%; /* Ensure two cards fit side by side */
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  /* Flexbox layout for card content */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* Add transition for smooth hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  /* Slightly scale the card up on hover */
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-photo img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.profile-title {
+  font-size: 27px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.profile-title-description {
+  font-size: 21px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.profile-detailed-description {
+  font-size: 19px;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: left;
+  
+  /* Allows detailed description to grow and push buttons down */
+  flex-grow: 1;
+}
+
+.profile-socials {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between; /* Spread logos evenly */
+}
+
+.social-btn {
+  display: inline-block;
+}
+
+.social-btn img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-btn img:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .profile-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-card {
+    width: 100%;
+  }
+  .profile-socials {
+    justify-content: space-evenly;
+  }
 }
