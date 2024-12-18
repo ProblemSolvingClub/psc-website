@@ -28,8 +28,7 @@ try {
 
     // Prepare the response
     $response = [
-        'sites' => $sites,
-        'tiers' => $tiers,
+        'users' => $users,
     ];
 
     // Output the response in JSON format
