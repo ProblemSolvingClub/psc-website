@@ -14,21 +14,10 @@ try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    try {
-        $usersQuery = $pdo->query("SELECT firstName, lastName, totalSolved, attendedMeetings, bonusProblems FROM users");
-        $users = $usersQuery->fetchAll(PDO::FETCH_ASSOC);
-        if (!$users) {
-            throw new Exception("Query returned no rows.");
-        }
-    } catch (PDOException $e) {
-        echo "PDO Error: " . $e->getMessage();
-    } catch (Exception $e) {
-        echo "General Error: " . $e->getMessage();
-    }
-
     // Fetch users
     $usersQuery = $pdo->query("SELECT firstName, lastName, totalSolved, attendedMeetings, bonusProblems FROM users");
     $users = $usersQuery->fetchAll(PDO::FETCH_ASSOC);
+    echo($users)
 
     // Fetch sites
     $sitesQuery = $pdo->query("SELECT id, name FROM sites");
