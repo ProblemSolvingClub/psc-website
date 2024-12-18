@@ -16,7 +16,7 @@ try {
     echo "Database connection successful.";
 
     // Fetch users
-    $usersQuery = $pdo->query("SELECT firstName, lastName, totalSolved, attendedMeetings, FROM users");
+    $usersQuery = $pdo->query("SELECT firstName, lastName, totalSolved, attendedMeetings FROM users");
     $users = $usersQuery->fetchAll(PDO::FETCH_ASSOC);
 
     // Fetch sites
