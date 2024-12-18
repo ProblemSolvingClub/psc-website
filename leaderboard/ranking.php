@@ -28,7 +28,6 @@ try {
 
     // Prepare the response
     $response = [
-        'users' => $users,
         'sites' => $sites,
         'tiers' => $tiers,
     ];
