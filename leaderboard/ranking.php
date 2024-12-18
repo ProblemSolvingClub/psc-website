@@ -17,7 +17,6 @@ try {
     // Fetch users
     $usersQuery = $pdo->query("SELECT firstName, lastName, totalSolved, attendedMeetings, bonusProblems FROM users");
     $users = $usersQuery->fetchAll(PDO::FETCH_ASSOC);
-    echo($users)
 
     // Fetch sites
     $sitesQuery = $pdo->query("SELECT id, name FROM sites");
@@ -30,6 +29,8 @@ try {
     // Prepare the response
     $response = [
         'users' => $users,
+        'sites' => $sites,
+        'tiers' => $tiers,
     ];
 
     // Output the response in JSON format
