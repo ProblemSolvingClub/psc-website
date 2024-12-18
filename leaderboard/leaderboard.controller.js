@@ -16,18 +16,19 @@
         vm.sites = [];
         vm.tiers = [];
 
-        leaderboardService.get()
-            .then(function(response) {
-                console.log('Response:', response);
-                vm.users = response.users.map(user => ({
-                    ...user,
-                    totalSolved: parseFloat(user.totalSolved),
-                    attendedMeetings: parseInt(user.attendedMeetings, 10),
-                    bonusProblems: parseInt(user.bonusProblems, 10)
-                }));
-                vm.sites = response.sites;
-                vm.tiers = response.tiers;
-            });
+        leaderboardService.get().then(function(response) {
+            console.log('API Response:', response);
+            if (!response.users) {
+                console.error('Users property is missing in the response.');
+            }
+            vm.users = response.users?.map(user => ({
+                ...user,
+                totalSolved: parseFloat(user.totalSolved),
+                attendedMeetings: parseInt(user.attendedMeetings, 10)
+            })) || [];
+            vm.sites = response.sites || [];
+            vm.tiers = response.tiers || [];
+        });
 
         function getUserDisplayName(user) {
             var displayName = user.firstName;
