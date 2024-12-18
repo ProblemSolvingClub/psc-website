@@ -27,10 +27,6 @@ title: Leaderboard
   <p>
     There are 5 tiers based on your point total: Bits, Bytes, Integers, Floats and Doubles.  Tiers above 'Bits' are achieved by earning 25, 50, 100, and 125 total points.  
   </p>
-  
-  <p>
-    Bonus points can be received by attending our Wednesday meetings.  Solving problems in the practice contests during meetings will also grant bonus points!
-  </p>
 
   <p>
     The members with the most points will win prizes including a lunch with the CTO of Arcurve.
@@ -46,7 +42,6 @@ title: Leaderboard
         <th>Tier</th>
         <th>Total</th>
         <th>Attended Meetings</th>
-        <th>Bonus Problems</th>
       </tr>
     </thead>
     <tbody>
@@ -68,7 +63,6 @@ title: Leaderboard
         <td ng-bind="vm.getTier(user.totalSolved).name"></td>
         <td ng-bind="vm.getDisplayScore(user.totalSolved)"></td>
         <td ng-bind="user.attendedMeetings"></td>
-        <td ng-bind="user.bonusProblems"></td>
       </tr>
   
       <!-- Add empty rows until the table is filled -->
