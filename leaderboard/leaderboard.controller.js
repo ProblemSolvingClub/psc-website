@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-
+je
     angular
         .module('leaderboard')
         .controller('LeaderboardController', LeaderboardController);
