@@ -1101,3 +1101,44 @@ a.welcome {
     justify-content: space-evenly;
   }
 }
+
+/* RMRC Contest Page Styles */
+.rmrc-banner {
+  background: #1a1a1b;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 30px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.rmrc-banner h2 {
+  color: #fff;
+  font-size: 28px;
+  margin: 0 0 15px 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.rmrc-banner .dates {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.rmrc-banner p {
+  color: #ecf0f1;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.rmrc-poster {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
