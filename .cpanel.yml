@@ -1,5 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/cpc/public_html/
-    - /bin/cp -R /_site/* $DEPLOYPATH
+    - export DEPLOYPATH=/home/cpc/public_html
+    - bundle exec jekyll build
+    - /bin/cp -R _site/. $DEPLOYPATH
