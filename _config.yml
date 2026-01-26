@@ -2,7 +2,7 @@
 # Note: Any updated settings will not be shown on static preview UNLESS you rebuild the site!
 title: Competitive Programming Club
 baseurl: ""
-url: "http://cpc.cpsc.ucalgary.ca"
+url: "https://cpc.cpsc.ucalgary.ca"
 email: cpc.uofc@gmail.com
 facebook: https://www.facebook.com/CompetitiveProgrammingClub
 twitter: https://twitter.com/ucalgary_cpc
